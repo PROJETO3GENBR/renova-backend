@@ -3,7 +3,6 @@ import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 //import { Categoria } from "src/categoria/entities/categoria.entity";
 
 @Entity({name: 'categoria'})
-
 export class Categoria{
     @PrimaryGeneratedColumn()
     id: number;
@@ -16,7 +15,4 @@ export class Categoria{
     @IsNotEmpty()
     @Column({nullable: false})
     categoria_eletronico: boolean;
-
-
-    categoria: Categoria;
 }

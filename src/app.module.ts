@@ -15,7 +15,7 @@ import { Categoria } from './categoria/entities/categoria.entity';
       password: 'root',
       database: 'prjintegrador',
       entities: [Categoria],
-      synchronize: false
+      synchronize: true
     }),
     CategoriaModule
   ],

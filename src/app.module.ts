@@ -4,6 +4,8 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { CategoriaModule } from './categoria/categoria.module';
 import { Categoria } from './categoria/entities/categoria.entity';
+import { Usuario } from './usuario/entities/usuario.entity';
+import { UsuarioModule } from './usuario/usuario.module';
 
 @Module({
   imports: [
@@ -14,10 +16,11 @@ import { Categoria } from './categoria/entities/categoria.entity';
       username: 'root',
       password: 'root',
       database: 'prjintegrador',
-      entities: [Categoria],
+      entities: [Categoria, Usuario],
       synchronize: true
     }),
-    CategoriaModule
+    CategoriaModule,
+    UsuarioModule
   ],
   controllers: [],
   providers: [],

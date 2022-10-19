@@ -15,4 +15,5 @@ export class Categoria{
     @IsNotEmpty()
     @Column({nullable: false})
     categoria_eletronico: boolean;
+    produto: any;
 }

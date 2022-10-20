@@ -1,5 +1,6 @@
 import { IsNotEmpty } from "class-validator";
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Produto } from "src/produto/entities/produto.entity";
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 
 
 @Entity({name: 'tb_usuario'})
@@ -23,6 +24,11 @@ export class Usuario {
 
     @Column({length: 255, nullable: false})
     foto: string
-    produto: any;
+    //produto: any;
+
+    @OneToMany(() => Produto, (produto) => produto.usuario, {
+        onDelete: "CASCADE"
+    })
+    produto: Produto
  
 }

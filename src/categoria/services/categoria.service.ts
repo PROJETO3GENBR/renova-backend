@@ -5,6 +5,9 @@ import { DeleteResult, ILike, Repository } from "typeorm";
 
 @Injectable()
 export class CategoriaService {
+    findByCategoria(categoria: boolean): Promise<Categoria[]> {
+        throw new Error("Method not implemented.");
+    }
     constructor(
         @InjectRepository(Categoria)
         private categoriaRepository: Repository<Categoria>

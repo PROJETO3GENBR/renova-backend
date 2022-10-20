@@ -1,7 +1,6 @@
 import { Body, Controller, Delete, Get, HttpCode, Param, Post, Put } from "@nestjs/common/decorators";
 import { HttpStatus } from "@nestjs/common/enums";
 import { ParseIntPipe } from "@nestjs/common/pipes";
-import { get } from "http";
 import { Produto } from "../entities/produto.entity";
 
 

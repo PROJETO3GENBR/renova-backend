@@ -4,6 +4,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { CategoriaModule } from './categoria/categoria.module';
 import { Categoria } from './categoria/entities/categoria.entity';
+import { Produto } from './produto/entities/produto.entity';
 import { Usuario } from './usuario/entities/usuario.entity';
 import { UsuarioModule } from './usuario/usuario.module';
 
@@ -16,7 +17,7 @@ import { UsuarioModule } from './usuario/usuario.module';
       username: 'root',
       password: 'root',
       database: 'prjintegrador',
-      entities: [Categoria, Usuario],
+      entities: [Categoria, Usuario, Produto],
       synchronize: true
     }),
     CategoriaModule,

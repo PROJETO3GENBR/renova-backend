@@ -1,3 +1,19 @@
+import { Module } from "@nestjs/common";
+import { TypeOrmModule } from "@nestjs/typeorm";
+import { CategoriaService } from "src/categoria/services/categoria.service";
+import { UsuarioController } from "./controllers/usuario.controller";
+import { Usuario } from "./entities/usuario.entity";
+import { UsuarioService } from "./services/usuario.service";
+
+
+@Module({
+    imports: [TypeOrmModule.forFeature([Usuario])],
+    providers: [ UsuarioService],
+    controllers: [UsuarioController],
+    exports: [TypeOrmModule]
+})
+export class UsuarioModule {}
+.
 import { HttpException, HttpStatus, Injectable } from "@nestjs/common";
 import { InjectRepository } from "@nestjs/typeorm";
 import { DeleteResult, ILike, Repository } from "typeorm";
@@ -24,7 +40,7 @@ export class UsuarioService {
                 id
             },
             relations: {
-               // produto: true
+               produto: true
             }
         });
         if (!usuario)
@@ -35,7 +51,10 @@ export class UsuarioService {
     async findByNome(nome: string): Promise<Usuario[]> {
         return await this.usuarioRepository.find({
             where: {
-                nome: ILike(`%${nome}%`)
+                nome: ILike(%${nome}%)
+            },
+            relations:  {
+                produto: true
             }
         })
     }
@@ -45,7 +64,7 @@ export class UsuarioService {
     async update(usuario: Usuario): Promise<Usuario> {
 
         let buscaUsuario = await this.findById(usuario.id);
-        
+
         if (!buscaUsuario || !usuario.id)
         throw new HttpException('Usuario não encontrado!',HttpStatus.NOT_FOUND);
 
@@ -59,5 +78,5 @@ export class UsuarioService {
 
         return await this.usuarioRepository.delete(id);
     }
-    
+
 }

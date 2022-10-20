@@ -1,10 +1,9 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { CategoriaModule } from './categoria/categoria.module';
 import { Categoria } from './categoria/entities/categoria.entity';
 import { Produto } from './produto/entities/produto.entity';
+import { ProdutoModule } from './produto/produto.module';
 import { Usuario } from './usuario/entities/usuario.entity';
 import { UsuarioModule } from './usuario/usuario.module';
 
@@ -21,7 +20,8 @@ import { UsuarioModule } from './usuario/usuario.module';
       synchronize: true
     }),
     CategoriaModule,
-    UsuarioModule
+    UsuarioModule,
+    ProdutoModule
   ],
   controllers: [],
   providers: [],

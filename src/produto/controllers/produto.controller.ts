@@ -2,14 +2,11 @@ import { Body, Controller, Delete, Get, HttpCode, Param, Post, Put } from "@nest
 import { HttpStatus } from "@nestjs/common/enums";
 import { ParseIntPipe } from "@nestjs/common/pipes";
 import { Produto } from "../entities/produto.entity";
-
-
-
-
+import { ProdutoService } from "../services/produto.service";
 
 @Controller('/produto')
 export class ProdutoController {
-    constructor(private readonly produtoService){}
+    constructor(private readonly produtoService: ProdutoService){}
 
     @Get()
     @HttpCode(HttpStatus.OK)

@@ -1,5 +1,6 @@
 import { IsNotEmpty } from "class-validator";
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Produto } from "src/produto/entities/produto.entity";
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 //import { Categoria } from "src/categoria/entities/categoria.entity";
 
 @Entity({name: 'categoria'})
@@ -15,5 +16,9 @@ export class Categoria{
     @IsNotEmpty()
     @Column({nullable: false})
     categoria_eletronico: boolean;
-    produto: any;
+
+    @OneToMany(() => Produto, (produto) => produto.usuario, {
+        onDelete: "CASCADE"
+    })
+    produto: Produto
 }

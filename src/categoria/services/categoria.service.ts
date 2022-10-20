@@ -1,21 +1,20 @@
-import { HttpException, HttpStatus, Inject, Injectable } from "@nestjs/common";
+import { HttpException, HttpStatus, Injectable } from "@nestjs/common";
 import { InjectRepository } from "@nestjs/typeorm";
 import { Categoria } from "src/categoria/entities/categoria.entity"
 import { DeleteResult, ILike, Repository } from "typeorm";
 
 @Injectable()
 export class CategoriaService {
-    findByCategoria(categoria: boolean): Promise<Categoria[]> {
-        throw new Error("Method not implemented.");
-    }
     constructor(
         @InjectRepository(Categoria)
         private categoriaRepository: Repository<Categoria>
 
     ) { }
+
     async findAll(): Promise<Categoria[]> {
         return await this.categoriaRepository.find();
     }
+
     async findById(id: number): Promise<Categoria> {
         let categoria = await this.categoriaRepository.findOne({
             where: {
@@ -31,7 +30,7 @@ export class CategoriaService {
     //  async findByCategoria(categoria_composto: boolean): Promise<Categoria[]>{
     //      return await this.categoriaRepository.find({
     //          where:{
-    //              categoria:ILike(`%${categoria_composto}%`)
+    //              categoria:ILike(%${categoria_composto}%)
     //          }
     //      })
     //  }
@@ -40,10 +39,9 @@ export class CategoriaService {
     async create(categoria: Categoria): Promise<Categoria> {
         return await this.categoriaRepository.save(categoria);
     }
+
     async update(categoria: Categoria): Promise<Categoria> {
         let buscaCategoria: Categoria = await this.findById(categoria.id);
-
-        console.table(buscaCategoria);
 
         if (!buscaCategoria || !categoria.id)
             throw new HttpException('Postagem não encontrada', HttpStatus.NOT_FOUND);
@@ -51,6 +49,7 @@ export class CategoriaService {
         return await this.categoriaRepository.save(categoria);
 
     }
+
     async delete(id: number): Promise<DeleteResult>{
 
         let buscaCategoria = await this.findById(id);

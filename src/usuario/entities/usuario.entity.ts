@@ -26,9 +26,7 @@ export class Usuario {
     foto: string
     //produto: any;
 
-    @OneToMany(() => Produto, (produto) => produto.usuario, {
-        onDelete: "CASCADE"
-    })
+    @OneToMany(() => Produto, (produto) => produto.usuario)
     produto: Produto
  
 }

@@ -4,12 +4,15 @@ import { ParseIntPipe } from "@nestjs/common/pipes";
 import { Usuario } from "../entities/usuario.entity";
 import { UsuarioService } from "../services/usuario.service";
 
-
-
 @Controller("/usuario")
 export class UsuarioController {
 
     constructor( private readonly usuarioService: UsuarioService ) {}
+    @Post()
+    @HttpCode(HttpStatus.CREATED)
+    create(@Body() usuario: Usuario): Promise<Usuario> {
+        return this.usuarioService.create(usuario);
+    }
 
     @Get()
     @HttpCode(HttpStatus.OK)
@@ -28,20 +31,16 @@ export class UsuarioController {
     findByNome(@Param('nome') nome: string): Promise<Usuario[]> {
         return this.usuarioService.findByNome(nome);
     }
-    @Post()
-    @HttpCode(HttpStatus.CREATED)
-    create(@Body() usuario: Usuario): Promise<Usuario> {
-        return this.usuarioService.create(usuario);
-    }
+    
     @Put()
     @HttpCode(HttpStatus.OK)
-    uptade(@Body() usuario: Usuario): Promise<Usuario> {
+    updade(@Body() usuario: Usuario): Promise<Usuario> {
         return this.usuarioService.update(usuario);
     }
+
     @Delete('/:id')
     @HttpCode(HttpStatus.NO_CONTENT)
     delete(@Param('id', ParseIntPipe) id: number) {
         return this.usuarioService.delete(id);
     }
-
 }

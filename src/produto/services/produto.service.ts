@@ -4,13 +4,12 @@ import { InjectRepository } from "@nestjs/typeorm";
 import { DeleteResult, ILike, Repository } from "typeorm";
 import { Produto } from "../entities/produto.entity";
 
-
 @Injectable()
 export class ProdutoService {
   constructor(
     @InjectRepository(Produto)
     private produtoRepository: Repository<Produto>
-  ) { }
+  ){}
 
   async create(produto: Produto): Promise<Produto> { 
     return await this.produtoRepository.save(produto);
@@ -27,7 +26,7 @@ export class ProdutoService {
       where: {id},
       relations: {categoria: true}
     });
-    if (!produto)
+    if(!produto)
       throw new HttpException('Produto não encontrado!', HttpStatus.NOT_FOUND);
     return produto;
   }

@@ -2,9 +2,7 @@ import { IsNotEmpty } from "class-validator";
 import { Produto } from "src/produto/entities/produto.entity";
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 
-
 @Entity({name: 'tb_usuario'})
-
 export class Usuario {
 
     @PrimaryGeneratedColumn()
@@ -28,5 +26,4 @@ export class Usuario {
 
     @OneToMany(() => Produto, (produto) => produto.usuario)
     produto: Produto
- 
 }

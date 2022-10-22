@@ -7,8 +7,7 @@ import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 export class Categoria{
     @PrimaryGeneratedColumn()
     id: number;
-
-
+    
     @IsNotEmpty()
     @Column({nullable: false})
     categoria_composto: boolean;
@@ -17,8 +16,6 @@ export class Categoria{
     @Column({nullable: false})
     categoria_eletronico: boolean;
 
-    @OneToMany(() => Produto, (produto) => produto.usuario, {
-        onDelete: "CASCADE"
-    })
+    @OneToMany(() => Produto, (produto) => produto.usuario, {onDelete: "CASCADE"})
     produto: Produto
 }

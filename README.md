@@ -1,4 +1,4 @@
-![Renova](/logo/renova-green1.png "RENOVA")
+![Renova](/logo/renova2.png "RENOVA")
 
 ## Descrição
 

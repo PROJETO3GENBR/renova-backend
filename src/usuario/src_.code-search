@@ -1,0 +1,23 @@
+# Query: src/
+
+8 results - 6 files
+
+package.json:
+  11:     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+
+..\categoria\entities\categoria.entity.ts:
+  2: import { Produto } from "src/produto/entities/produto.entity";
+  4: //import { Categoria } from "src/categoria/entities/categoria.entity";
+
+..\categoria\services\categoria.service.ts:
+  3: import { Categoria } from "src/categoria/entities/categoria.entity"
+
+..\produto\entities\produto.entity.ts:
+  2: import { Categoria } from "src/categoria/entities/categoria.entity";
+  3: import { Usuario } from "src/usuario/entities/usuario.entity";
+
+..\usuario\entities\usuario.entity.ts:
+  2: import { Produto } from "src/produto/entities/produto.entity";
+
+test\app.e2e-spec.ts:
+  4: import { AppModule } from './../src/app.module';

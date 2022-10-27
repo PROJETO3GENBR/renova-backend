@@ -1,46 +1,33 @@
-import { Body, Controller, Delete, Get, HttpCode, Param, Post, Put } from "@nestjs/common/decorators";
-import { HttpStatus } from "@nestjs/common/enums";
-import { ParseIntPipe } from "@nestjs/common/pipes";
+import { Body, Controller, Get, HttpCode, HttpStatus, Post, Put } from "@nestjs/common";
+import { UseGuards } from "@nestjs/common/decorators/core/use-guards.decorator";
+import { JwtAuthGuard } from "../../auth/guard/jwt-auth.guard";
 import { Usuario } from "../entities/usuario.entity";
 import { UsuarioService } from "../services/usuario.service";
 
 @Controller("/usuario")
 export class UsuarioController {
-
     constructor( private readonly usuarioService: UsuarioService ) {}
-    @Post()
-    @HttpCode(HttpStatus.CREATED)
-    create(@Body() usuario: Usuario): Promise<Usuario> {
-        return this.usuarioService.create(usuario);
-    }
 
-    @Get()
+    @UseGuards(JwtAuthGuard)
+    @Get('/all')
     @HttpCode(HttpStatus.OK)
     findAll(): Promise<Usuario[]> {
         return this.usuarioService.findAll();
     }
 
-    @Get('/:id')
-    @HttpCode(HttpStatus.OK)
-    findById(@Param('id',ParseIntPipe)id :number): Promise<Usuario> {
-        return this.usuarioService.findById(id);
+    @Post('/cadastrar')
+    @HttpCode(HttpStatus.CREATED)
+    async create(@Body() usuario: Usuario): Promise<Usuario> {
+        return await this.usuarioService.create(usuario);
     }
 
-    @Get('/nome/:nome')
+    @UseGuards(JwtAuthGuard)
+    @Put('/atualizar')
     @HttpCode(HttpStatus.OK)
-    findByNome(@Param('nome') nome: string): Promise<Usuario[]> {
-        return this.usuarioService.findByNome(nome);
-    }
-    
-    @Put()
-    @HttpCode(HttpStatus.OK)
-    updade(@Body() usuario: Usuario): Promise<Usuario> {
+    async updade(@Body() usuario: Usuario): Promise<Usuario> {
         return this.usuarioService.update(usuario);
     }
 
-    @Delete('/:id')
-    @HttpCode(HttpStatus.NO_CONTENT)
-    delete(@Param('id', ParseIntPipe) id: number) {
-        return this.usuarioService.delete(id);
-    }
+   
+
 }

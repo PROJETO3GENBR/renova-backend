@@ -1,7 +1,7 @@
 import { HttpException, HttpStatus, Injectable } from "@nestjs/common";
 import { InjectRepository } from "@nestjs/typeorm";
-import { Categoria } from "src/categoria/entities/categoria.entity"
-import { DeleteResult, ILike, Repository } from "typeorm";
+import { Categoria } from "../../categoria/entities/categoria.entity"
+import { DeleteResult, Repository } from "typeorm";
 
 @Injectable()
 export class CategoriaService {

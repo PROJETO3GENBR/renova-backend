@@ -2,7 +2,10 @@ import { Body,Controller,Delete, Get, HttpCode , HttpStatus, Param, ParseIntPipe
 import { Categoria } from "../entities/categoria.entity";
 import { CategoriaService } from "../services/categoria.service";
 
+@ApiTags('Categoria')
 @Controller("/categoria")
+//TODO: Verificar funcionalidade
+@ApiBearerAuth()
 export class CategoriaController {
     constructor(private categoriaService: CategoriaService) { }
 

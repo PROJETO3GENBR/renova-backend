@@ -37,7 +37,7 @@ describe('Testes dos Módulos Usuário e Auth (e2e)', () => {
   });
   it('  01 - Deve Cadastrar Usuario', async() =>{
     const reposta = await request( app.getHttpServer())
-    .post('/usuarios/ cadastrar')
+    .post('/usuario/cadastrar')
     .send({
       nome: 'Root',
       usuario: 'root@root.com',
@@ -65,7 +65,7 @@ describe('Testes dos Módulos Usuário e Auth (e2e)', () => {
     .post('/usuario/cadastrar')
     .send({
       nome: 'Root',
-      uruario:' root@root.com',
+      usuario:' root@root.com',
       senha: 'rootroot',
       foto:''
     })

@@ -13,10 +13,20 @@ export class UsuarioService {
     private bcrypt: Bcrypt
   ) { }
 
+  /**
+ * @desc Salva um usuario no banco de dados
+ * @param categoria 
+ * @returns objeto de produto
+ */
   async create(usuario: Usuario): Promise<Usuario> {
     return await this.usuarioRepository.save(usuario);
   }
 
+/**
+   * @desc Essa função será usada para trazer todos os usuarios cadastrados.
+   * @return Retorna um array de obejetos de Usuario
+   * @example findAll () Todos as usuarios cadastrados no banco de dados será exibidas.
+   */
   async findAll(): Promise<Usuario[]> {
     return await this.usuarioRepository.find({
       relations: {
@@ -24,7 +34,13 @@ export class UsuarioService {
       }
     });
   }
-
+ /**
+   * @desc Mostra um usuario pelo id
+   * @param id do usuario que será exibido
+   * @returns Um objeto de usuario
+   * @throws HttpException em caso de Usuario não encontrado
+   * @example findById(1) // A usuario com id 1 será exibido
+   */
   async findById(id: number): Promise<Usuario> {
     let usuario = await this.usuarioRepository.findOne({ where: { id }, relations: { produto: true } });
     if (!usuario)
@@ -32,7 +48,6 @@ export class UsuarioService {
 
     return usuario;
   }
-
   async findByUsuario(usuario: string): Promise<Usuario | undefined> {
     return await this.usuarioRepository.findOne({
       where: {
@@ -42,6 +57,13 @@ export class UsuarioService {
     });
   }
 
+   /**
+     * @desc Atualiza um usuario no banco de dados
+     * @param usuario que será atualizada
+     * @returns objeto de usuario
+     * @throws HttpException Em caso de usuario recebido não ser encontrado
+     * 
+     */
   async update(usuario: Usuario): Promise<Usuario> {
 
     let updateUsuario: Usuario = await this.findById(usuario.id);

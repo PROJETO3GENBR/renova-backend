@@ -23,11 +23,18 @@ export class CategoriaController {
         return this.categoriaService.findById(id);
 
     }
-    //TODO - @Get('/categoria/:categoria')
-    // @HttpCode(HttpStatus.OK)
-    // findByCategoria(@Param('categoria')categoria: boolean): Promise<Categoria[]> {
-    //     return this.categoriaService.findByCategoria(categoria);
-    // }
+
+    @Get('/categoria/composto')
+    @HttpCode(HttpStatus.OK)
+    findByComposto(): Promise<Categoria[]> {
+        return this.categoriaService.findByComposto();
+    }
+
+    @Get('/categoria/eletronico')
+    @HttpCode(HttpStatus.OK)
+    findByEletronico(): Promise<Categoria[]> {
+        return this.categoriaService.findByEletronico();
+    }
 
     @Put()
     @HttpCode(HttpStatus.OK)

@@ -5,17 +5,22 @@ import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity({name: 'categoria'})
 export class Categoria{
+
     @PrimaryGeneratedColumn()
+    @ApiProperty()
     id: number;
     
+    @ApiProperty()
     @IsNotEmpty()
     @Column({nullable: false})
     categoria_composto: boolean;
 
+    @ApiProperty()
     @IsNotEmpty()
     @Column({nullable: false})
     categoria_eletronico: boolean;
 
+    @ApiProperty({type: () => Produto )
     @OneToMany(() => Produto, (produto) => produto.usuario, {onDelete: "CASCADE"})
     produto: Produto
 }

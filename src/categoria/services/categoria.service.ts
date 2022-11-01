@@ -12,7 +12,7 @@ export class CategoriaService {
 
   /**
    * @desc Essa função será usada para trazer todas as categorias cadastradas.
-   * @return Retorna um array de obejetos de Categoria
+   * @return Retorna um array de objetos de Categoria
    * @example findAll () Todas as categorias cadastradas no banco de dados será exibidas.
    */
   async findAll(): Promise<Categoria[]> {
@@ -79,7 +79,6 @@ export class CategoriaService {
       throw new HttpException('Categoria não encontrada', HttpStatus.NOT_FOUND);
       return await this.categoriaRepository.save(categoria);
   }
-
 
   /**
    * @desc Deleção de uma categoria no banco de dados

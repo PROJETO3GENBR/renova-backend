@@ -2,10 +2,10 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Footer } from './components/estaticos/footer/Footer';
-import { Home } from './components/Paginas/home/Home';
-import { Login } from './components/Login/Login.tsx'
+import { Home } from './Paginas/Home/Home';
+import { Login } from './Paginas/Login/Login'
 import  Card  from './components/Card/Card';
-import { CadastroCliente } from './paginas/cadastroCliente/CadastroCliente';
+import { CadastroCliente } from './Paginas/CadastroCliente/CadastroCliente';
 
 
 function App() {

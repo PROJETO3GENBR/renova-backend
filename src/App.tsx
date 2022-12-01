@@ -14,22 +14,14 @@ function App() {
     <Router>
       <Navbar />
         <Routes>
-          <div style={{minHeight: '100vh'}}>
-            <Route path='/'>
-              <Login />
-            </Route>
-            <Route path='/home'>
-              <Login />
-            </Route>
-            <Route path='/cliente'>
-              <Home />
-            </Route>
-            <Route path='/cadastrocliente'>
-              <CadastroCliente />
-            </Route>
-          </div>
+       
+            <Route path='/' element={<Home />}/>
+            <Route path='/home' element={<Home />} />
+            <Route path='/cadastro' element={<CadastroCliente />} />
+            <Route path='/login' element={<Login />} />
+
         </Routes>
-      < Footer />
+      <Footer />
     </Router>
   );
 }

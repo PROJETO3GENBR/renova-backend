@@ -72,7 +72,7 @@ export default function Navbar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" color="primary">
+      <AppBar position="static" color="secondary">
         <Toolbar>
           <IconButton
             edge="start"
@@ -82,7 +82,7 @@ export default function Navbar() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography className={classes.title} variant="h6" noWrap>
+          <Typography className={classes.title} variant="h2" noWrap>
             Renova
           </Typography>
           <Button  id='botao_nav' href='/home'>Home</Button>

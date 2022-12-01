@@ -28,7 +28,7 @@ export default function App() {
           </Button>
           <Button
             onClick={() => {
-              setItemCount(itemCount   1);
+              setItemCount(itemCount);
             }}
           >
             {" "}

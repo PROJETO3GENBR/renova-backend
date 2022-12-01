@@ -6,6 +6,7 @@ import { Home } from './Paginas/Home/Home';
 import { Login } from './Paginas/Login/Login'
 import  Card  from './components/Card/Card';
 import { CadastroCliente } from './Paginas/CadastroCliente/CadastroCliente';
+import Navbar from './components/estaticos/Navbar/Navbar';
 
 
 function App() {

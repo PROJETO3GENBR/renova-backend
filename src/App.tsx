@@ -5,7 +5,7 @@ import { Footer } from './components/estaticos/footer/Footer';
 import { Home } from './Paginas/Home/Home';
 import { Login } from './Paginas/Login/Login'
 import  Card  from './components/Card/Card';
-import { CadastroCliente } from './Paginas/CadastroCliente/CadastroCliente';
+import { CadastroCliente } from './Paginas/cadastroCliente/CadastroCliente';
 import Navbar from './components/estaticos/Navbar/Navbar';
 
 

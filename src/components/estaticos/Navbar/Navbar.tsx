@@ -86,8 +86,8 @@ export default function Navbar() {
             Renova
           </Typography>
           <Button  id='botao_nav' href='/home'>Home</Button>
-          <Button id='botao_nav' href='/cliente'>Cliente</Button>
-          <Button id='botao_nav' href='/cadastroCliente'>Cadastro</Button>
+          <Button id='botao_nav' href='/login'>Cliente</Button>
+          <Button id='botao_nav' href='/cadastro'>Cadastro</Button>
 
           <div className={classes.search}>
             <div className={classes.searchIcon}>

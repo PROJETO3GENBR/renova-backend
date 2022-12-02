@@ -37,5 +37,4 @@ function CadastroCliente() {
     );
 }
 
-
 export { CadastroCliente };

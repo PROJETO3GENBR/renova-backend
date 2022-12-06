@@ -1,11 +1,64 @@
-import './CadastroCliente.css';
-import React from 'react';
+import React, { useEffect, useState , ChangeEvent } from 'react';
+import { useNavigate } from 'react-router-dom';
+import User from '../../models/User';
+import { CadastroCliente as cadastrar } from '../../services/Service';
 import { Grid,Typography, Button, TextField } from '@material-ui/core';
 import {Box} from '@mui/material';
 import { Link } from 'react-router-dom';
+import './CadastroCliente.css';
 
 
 function CadastroCliente() {
+
+    let navigate = useNavigate();
+    const [confirmarSenha,setConfirmarSenha] = useState<String>("")
+    const [user, setUser] = useState<User>(
+        {
+            id: 0,
+            usuario: '',
+            email: '',
+            senha: '',
+            foto:'' ,
+        })
+
+    const [userResult, setUserResult] = useState<User>(
+        {
+            id: 0,
+            usuario: '',
+            email: '',
+            senha: '',
+            foto: ''
+        })
+
+    useEffect(() => {
+        if (userResult.id != 0) {
+            navigate("/login")
+        }
+    }, [userResult])
+
+
+    function confirmarSenhaHandle(e: ChangeEvent<HTMLInputElement>){
+        setConfirmarSenha(e.target.value)
+    }
+
+
+    function updatedModel(e: ChangeEvent<HTMLInputElement>) {
+
+        setUser({
+            ...user,
+            [e.target.name]: e.target.value
+        })
+
+    }
+    async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
+        e.preventDefault()
+        if(confirmarSenha == user.senha){
+        cadastrar('/usuario/cadastrar', user, setUserResult)
+        alert('Usuario cadastrado com sucesso')
+        }else{
+            alert('Dados inconsistentes. Favor verificar as informações de cadastro.')
+        }
+    }
     return (
         <Grid container direction='row' justifyContent='center' alignItems='center'>
             <Grid item xs={6} className='imagem2'></Grid>
@@ -36,5 +89,4 @@ function CadastroCliente() {
         </Grid>
     );
 }
-
 export { CadastroCliente };

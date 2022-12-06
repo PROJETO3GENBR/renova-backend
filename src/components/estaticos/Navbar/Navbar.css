@@ -1,5 +1,20 @@
+#navbar {
+  background-color: #2E4052;
+}
+
+#logo {
+  display: flex;
+  width: 200px;
+}
+
+#botoes {
+  display: flex;
+  position: sticky;
+  left: 90%;
+}
+
 #botao_nav {
   background-color: #072b47;
   color: white;
-  margin:1%;
+  margin: 2%;
 }

@@ -19,7 +19,14 @@ export class UsuarioService {
  * @returns objeto de produto
  */
   async create(usuario: Usuario): Promise<Usuario> {
-    return await this.usuarioRepository.save(usuario);
+    let usuarioBusca = await this.findByUsuario(usuario.usuario);
+
+    if (!usuarioBusca){
+      usuario.senha = await this.bcrypt.criptografarSenha(usuario.senha)
+      return await this.usuarioRepository.save(usuario);
+    }
+
+    throw new HttpException("O Usuario ja existe!", HttpStatus.BAD_REQUEST)
   }
 
 /**
@@ -42,7 +49,11 @@ export class UsuarioService {
    * @example findById(1) // A usuario com id 1 será exibido
    */
   async findById(id: number): Promise<Usuario> {
-    let usuario = await this.usuarioRepository.findOne({ where: { id }, relations: { produto: true } });
+    let usuario = await this.usuarioRepository.findOne({ 
+      where: { id }, 
+      // relations: 
+      // { produto: true } 
+    });
     if (!usuario)
       throw new HttpException('Usuario não encontrado!', HttpStatus.NOT_FOUND);
 
@@ -71,8 +82,6 @@ export class UsuarioService {
 
     if (!updateUsuario)
       throw new HttpException('Usuário não encontrado!', HttpStatus.NOT_FOUND)
-
-    
 
     if (!buscaUsuario && buscaUsuario.id !== usuario.id)
       throw new HttpException('Usuario (e-mail) já cadastrado!', HttpStatus.BAD_REQUEST);

@@ -9,19 +9,19 @@ export class Categoria{
 
     @PrimaryGeneratedColumn()
     @ApiProperty()
-    id: number;
+    public id: number;
     
     @ApiProperty()
     @IsNotEmpty()
     @Column({nullable: false})
-    categoria_composto: boolean;
+    public categoria_composto: boolean;
 
     @ApiProperty()
     @IsNotEmpty()
     @Column({nullable: false})
-    categoria_eletronico: boolean;
+    public categoria_eletronico: boolean;
 
     @ApiProperty({type: () => Produto} )
     @OneToMany(() => Produto, (produto) => produto.usuario, {onDelete: "CASCADE"})
-    produto: Produto
+    public produto: Produto[]
 }

@@ -1,4 +1,4 @@
-import { IsNotEmpty } from "class-validator";
+import { IsEmail, IsNotEmpty } from "class-validator";
 import { Produto } from "../../produto/entities/produto.entity";
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { ApiProperty } from "@nestjs/swagger";
@@ -8,28 +8,29 @@ export class Usuario {
     
     @PrimaryGeneratedColumn()
     @ApiProperty()
-    id: number
+    public id: number
 
     @IsNotEmpty()
     @Column({length: 100, nullable: false})
     @ApiProperty()
-    usuario: string
+    public usuario: string
 
-    @IsNotEmpty()
+    @IsEmail()
     @Column({length: 100, nullable: false})
     @ApiProperty({example: 'email@email.com'})
-    email: string
+    public email: string
 
     @IsNotEmpty()
     @Column({length: 100, nullable: false})
     @ApiProperty({example: 'password'})
-    senha: string
+    public senha: string
 
     @Column({length: 255, nullable: false})
     @ApiProperty()
-    foto: string
+    public foto: string
     //produto: any;
 
+    @ApiProperty()
     @OneToMany(() => Produto, (produto) => produto.usuario)
-    produto: Produto
+    produto: Produto[]
 }

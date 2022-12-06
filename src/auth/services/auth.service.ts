@@ -13,7 +13,6 @@ export class AuthService {
     ) { }
 
     async validateUser (username: string, password: string): Promise<any> {
-
         const buscaUsuario = await this.usuarioService.findByUsuario(username)
 
         if (!buscaUsuario)
@@ -22,7 +21,6 @@ export class AuthService {
         const match = await this.bcrypt.compararSenhas(buscaUsuario.senha, password)
 
         if (buscaUsuario && match) {
-
             const { senha, ...result } = buscaUsuario;
             return result;
         }

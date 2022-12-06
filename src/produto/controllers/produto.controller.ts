@@ -36,7 +36,6 @@ export class ProdutoController {
     @HttpCode(HttpStatus.OK)
     update(@Body()produto: Produto): Promise<Produto>{
       return this.produtoService.update(produto);
-
     }
 
     @Delete('/:id')

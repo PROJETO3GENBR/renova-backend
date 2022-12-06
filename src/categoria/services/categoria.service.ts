@@ -21,7 +21,7 @@ export class CategoriaService {
 
   /**
    * @desc Mostra uma categoria pelo id
-   * @param id de categoria que será exibida
+   * @param id do produto que será exibido
    * @returns Um objeto de categoria
    * @throws HttpException em caso de Categoria não encontrada
    * @example findById(1) // A categoria com id 1 será exibida
@@ -85,7 +85,7 @@ export class CategoriaService {
    * @param id da categoria que será deletada
    * @returns void
    * @throw HttpException Em caso da categoria recebida não ser encontrada
-   * @example  delete(1) //  A categoria referenciada pelo id 1 será removida
+   * @example  delete(1) //  O produto referenciado pelo id 1 será removido
    */
   async delete(id: number): Promise<DeleteResult>{
     let buscaCategoria = await this.findById(id);

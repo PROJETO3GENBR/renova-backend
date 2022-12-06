@@ -3,7 +3,7 @@ import { ApiExcludeEndpoint } from "@nestjs/swagger";
 
 @Controller()
 export class AppController{
-  constructor(){}
+  constructor() {}
 
   @ApiExcludeEndpoint()
   @Get()

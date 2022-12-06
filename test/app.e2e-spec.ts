@@ -80,7 +80,7 @@ describe('Testes dos Módulos Usuário e Auth (e2e)', () => {
     expect(200)
   });
   it ('05-Deve Atualizar Um Usuario',async()=>{
-    request (app.getHttpServer())
+    return request (app.getHttpServer())
     .put('/usuario/atualizar')
     .set('Authorization', `${token}`)
     .send({
@@ -88,8 +88,11 @@ describe('Testes dos Módulos Usuário e Auth (e2e)', () => {
       nome: 'Root Atualizado',
       usuario: 'root@root.com',
       senha: 'rootroot',
-      foto: ''})
+      foto: ''
+    })
+    .expect(200)
     .then(resposta=>{
-    expect("Root Atualizado").toEqual(resposta.body.nome)})
-    expect(200)});  
+    expect("Root Atualizado").toEqual(resposta.body.nome);
+    });
+  });
 });

@@ -7,6 +7,9 @@ import Login from './Paginas/Login/Login'
 import  Card  from './components/Card/Card';
 import  CadastroCliente  from './Paginas/cadastroCliente/CadastroCliente';
 import Navbar from './components/estaticos/Navbar/Navbar';
+import ListaCategoria from './components/categoria/listaCategoria/ListaCategoria';
+import CadastroCategoria from './components/categoria/cadastroCategoria/CadastroCategoria';
+import DeletarCategoria from './components/categoria/deletarCategoria/DeletarCategoria';
 
 
 function App() {
@@ -19,7 +22,11 @@ function App() {
             <Route path='/home' element={<Home />} />
             <Route path='/cadastrar' element={<CadastroCliente />} />
             <Route path='/login' element={<Login />} />
-          
+            <Route path="/categoria" element={<ListaCategoria />} />
+            <Route path="/formularioCategoria" element={<CadastroCategoria/>} />
+            <Route path="/formularioCategoria/:id" element={<CadastroCategoria />} />
+            <Route path="/deletarCategoria/:id" element={<DeletarCategoria />} />
+
         </Routes>
       <Footer />
     </Router>

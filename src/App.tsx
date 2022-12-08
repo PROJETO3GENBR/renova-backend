@@ -5,7 +5,7 @@ import { Footer } from './components/estaticos/footer/Footer';
 import { Home } from './Paginas/Home/Home';
 import Login from './Paginas/Login/Login'
 import  Card  from './components/Card/Card';
-import { CadastroCliente } from './Paginas/cadastroCliente/CadastroCliente';
+import  CadastroCliente  from './Paginas/cadastroCliente/CadastroCliente';
 import Navbar from './components/estaticos/Navbar/Navbar';
 
 
@@ -15,9 +15,9 @@ function App() {
       <Navbar />
         <Routes>
        
-            <Route path='/' element={<Home />}/>
+            <Route path="/" element={<Login />} />
             <Route path='/home' element={<Home />} />
-            <Route path='/cadastro' element={<CadastroCliente />} />
+            <Route path='/cadastrar' element={<CadastroCliente />} />
             <Route path='/login' element={<Login />} />
           
         </Routes>
@@ -26,4 +26,4 @@ function App() {
   );
 }
 
-export { App };
+export default App ;

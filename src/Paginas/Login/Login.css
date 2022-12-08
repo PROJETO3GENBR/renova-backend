@@ -1,9 +1,14 @@
+body {
+    background-color: #294A2B;
+}
+
+
 .textos1{
     font-weight: bold !important;
  }
  
  .imagem{
-     background-image: url(https://i.imgur.com/d5bMdDJ.jpg);
+     background-image: url(https://i.imgur.com/ViNS0YV.png);
      background-repeat: no-repeat;
      width: 100vh;
      min-height: 100vh;
@@ -13,4 +18,28 @@
  
  .text-decorator-none{
      text-decoration: none;
+ }
+ #entrar_title{
+    
+    width: 390px;
+ }
+ #botao_login{
+    background-color: #2BAE5E;
+    font-weight: 800;
+    color: white;
+ }
+ #botao_login:hover{
+    background-color: #24884a;
+    font-weight: 800;
+    color: white;
+ }
+
+
+ #conta_cadastro{
+    color: #2BAE5E;
+    font-weight: 600;
+ }
+ #cadastre{
+    text-decoration: none ;
+    color: #24884a;
  }

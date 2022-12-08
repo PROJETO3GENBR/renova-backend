@@ -28,7 +28,7 @@ export default function Navbar() {
 
   return (
     <div className={classes.root}>
-      <AppBar id='navbar' position="static">
+      <AppBar  elevation={0} id='navbar' position="static">
         <Toolbar>
 
           <a href='/home'>

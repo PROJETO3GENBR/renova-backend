@@ -4,7 +4,7 @@ import {useNavigate, useParams } from 'react-router-dom'
 import './CadastroCategoria.css';
 import useLocalStorage from 'react-use-localstorage';
 import Categoria from '../../../models/Categoria';
-import { buscaId, post, put } from '../../../services/Service';
+import { buscaNome, post, put } from '../../../services/Service';
 
 
 function CadastroCategoria() {
@@ -31,7 +31,7 @@ function CadastroCategoria() {
     }, [id])
 
     async function findById(id: string) {
-        buscaId(`/categoria/${id}`, setCategoria, {
+        buscaNome(`/categoria/${id}`, setCategoria, {
             headers: {
               'Authorization': token
             }

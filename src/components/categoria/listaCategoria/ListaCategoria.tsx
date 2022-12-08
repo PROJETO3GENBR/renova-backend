@@ -1,15 +1,15 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { busca } from '../../../services/Service'
 import {Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
 import {Box} from '@mui/material';
-import Categoria from '../../../models/Categoria';
-import './ListaTema.css';
+import './ListaCategoria.css';
 import useLocalStorage from 'react-use-localstorage';
-import {useNavigate} from 'react-router-dom';
-import { busca } from '../../../services/Service';
+import { useNavigate } from 'react-router-dom'
+import Categoria from '../../../models/Categoria';
 
 function ListaCategoria() {
-  const [categorias, setCategorias] = useState<Categoria[]>([])
+  const [categoria, setCategoria] = useState<Categoria[]>([])
   const [token, setToken] = useLocalStorage('token');
   let navigate = useNavigate();
 
@@ -22,7 +22,7 @@ function ListaCategoria() {
 
 
   async function getCategoria(){
-    await busca("/categoria", setCategorias, {
+    await busca("/categoria", setCategoria, {
       headers: {
         'Authorization': token
       }
@@ -32,12 +32,12 @@ function ListaCategoria() {
 
   useEffect(()=>{
     getCategoria()
-  }, [categorias.length])
+  }, [categoria.length])
 
   return (
     <>
     {
-      categorias.map(categoria =>(
+      categoria.map(categoria =>(
       <Box m={2} >
         <Card variant="outlined">
           <CardContent>

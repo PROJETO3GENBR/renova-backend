@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import {Card, CardActions, CardContent, Button, Typography} from '@material-ui/core';
 import {Box} from '@mui/material';
-import './DeletarTema.css';
+import './DeletarCategoria.css';
 import { useNavigate, useParams } from 'react-router-dom';
 import useLocalStorage from 'react-use-localstorage';
-import { buscaId, deleteId } from '../../../services/Service';
+import { buscaNome, deleteNome } from '../../../services/Service';
 import Categoria from '../../../models/Categoria';
-
 
 function DeletarCategoria() {
   

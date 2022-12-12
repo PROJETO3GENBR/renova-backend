@@ -14,7 +14,7 @@ function Home() {
                     </Box>
                 </Grid>
                 <Grid xs={12} className='produtos'>
-                <TabProduto/>
+                {/* <TabProduto/> */}
                 </Grid>
             </Grid>
         </>

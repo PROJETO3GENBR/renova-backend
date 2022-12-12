@@ -29,7 +29,7 @@ function Footer (){
                                 <LinkedInIcon className='redes' />
                             </a>
                             <a href="mailto:projeto3genbr@outlook.com" target="_blank">
-                                <EmailIcon className='#' />
+                                <EmailIcon className='redes' />
                             </a>
                         </Box>
                     </Box>

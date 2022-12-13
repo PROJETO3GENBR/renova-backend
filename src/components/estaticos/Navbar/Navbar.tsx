@@ -28,13 +28,19 @@ export default function Navbar() {
 
   return (
     <div className={classes.root}>
-      <AppBar  elevation={0} id='navbar' position="static">
+      <AppBar elevation={0} id='navbar' position="static">
         <Toolbar>
 
           <a href='/home'>
 
             <img id='logo' src="https://raw.githubusercontent.com/PROJETO3GENBR/renova-visual-archives/main/logo/renovasemfundo.png" alt="logo" />
           </a>
+
+          <form className="navbar_search" action="/action_page.php">
+            <input id='navbar_search_input' type="text" placeholder="Search.." name="search"/>
+              <button id='navbar_search_button' type="submit"><i className="fa fa-search"></i>Buscar</button>
+          </form>
+
 
           <div id='botoes'>
             <Button id='botao_nav' href='/home'>Home</Button>

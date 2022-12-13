@@ -1,24 +1,97 @@
-import React from "react";
-import {Typography, Box, Grid, Button} from '@material-ui/core';
+import React, { useEffect, useState } from "react";
+import {Typography, Box, Grid, Button, Card, CardContent, CardActions, CardMedia} from '@material-ui/core';
 import './Home.css';
-import TabProduto from "../../components/produto/tabprodutos/TabProduto";
+import Produto from "../../models/Produto";
+import useLocalStorage from "react-use-localstorage";
+import { Link, useNavigate } from "react-router-dom";
+import { busca } from "../../services/Service";
 
 function Home() {
+    const [produto, setProduto] = useState<Produto[]>([])
+    const [token, setToken] = useLocalStorage('token');
+    let navigate = useNavigate();
+  
+    useEffect(() => {
+      if (token == "") {
+        alert("Você precisa estar logado")
+        navigate("/login")
+  
+      }
+    }, [token])
+  
+    async function getPost() {
+      await busca("/produto", setProduto, {
+        headers: {
+          'Authorization': token
+        }
+      })
+    }
+  
+    useEffect(() => {
+  
+      getPost()
+  
+    }, [produto.length])
+  
     return (
-        <>
-            <Grid container direction="row" justifyContent="center" alignItems="center" className='caixa'>
-                <Grid alignItems="center" item xs={6}>
-                    <Box paddingX={20} >
-                        <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" className='titulo'>Seja bem vindo(a)!</Typography>
-                        <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className='titulo'>expresse aqui os seus pensamentos e opiniões!</Typography>
-                    </Box>
-                </Grid>
-                <Grid xs={12} className='produtos'>
-                {/* <TabProduto/> */}
-                </Grid>
-            </Grid>
-        </>
-    );
-}
-
-export {Home};
+      <>
+        <Grid container>
+          {
+            produto.map(produto => (
+              <Grid item xs={6} sm={4} md={3} >
+                <Box m={2} >
+                  <Card variant="outlined">
+                    <CardContent>
+                      <CardMedia
+                        component="img"
+                        height="140"
+                        image={produto.foto}
+                        alt="#"
+                      />
+                      <Typography color="textSecondary" gutterBottom>
+                        Produtos
+                      </Typography>
+  
+                      <Typography className="bold" variant="h5" component="h2">
+                        {produto.nome}
+                      </Typography>
+                      <Typography variant="h6" component="h2">
+                        {produto.descricao}
+                      </Typography>
+                      <Typography variant="h5" component="h2">
+                        {`R$: ${produto.preco}`}
+                      </Typography>
+                      <Typography variant="body2" component="p">
+                        {produto.categoria?.descricao}
+                      </Typography>
+                    </CardContent>
+                    <CardActions>
+                      <Box display="flex" justifyContent="center" mb={1.5}>
+  
+                      {/* <Link to={`/formularioProduto/${produto.id}`} className="text-decorator-none" >
+                          <Box mx={1}>
+                            <Button variant="contained" className="marginLeft" size='small' color="primary" >
+                              atualizar
+                            </Button>
+                          </Box>
+                        </Link> */}
+                        <Link to={`/deletarProduto/${produto.id}`} className="text-decorator-none">
+                          <Box mx={1}>
+                            <Button variant="contained" size='small' color="secondary">
+                              comprar
+                            </Button>
+                          </Box>
+                        </Link>
+                      </Box>
+                    </CardActions>
+                  </Card>
+                </Box>
+              </Grid>
+            ))
+          }
+        </Grid>
+      </>
+    )
+  }
+  
+  export default Home;

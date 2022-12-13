@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Footer } from './components/estaticos/footer/Footer';
-import { Home } from './Paginas/Home/Home';
 import Login from './Paginas/Login/Login'
 import  Card  from './components/Card/Card';
 import  CadastroCliente  from './Paginas/cadastroCliente/CadastroCliente';
@@ -13,7 +12,7 @@ import DeletarCategoria from './components/categoria/deletarCategoria/DeletarCat
 import DeletarProduto from './components/produto/deletarProduto/DeletarProduto';
 import CadastroProduto from './components/produto/cadastroProduto/CadastroProduto';
 import ListaProduto from './components/produto/listaProduto/ListaProduto';
-
+import Home from './Paginas/Home/Home';
 
 function App() {
   return (

@@ -1,3 +1,7 @@
 html body {
   background-color: white
 }
+
+.bold {
+  font-weight: bold !important;
+}

@@ -10,8 +10,8 @@ function SucessPage() {
             <div id="circulo">
             <i id='checkmark'>✓</i>
             </div>
-            <h1>Compra realizada com sucesso</h1> 
-            <p>Nós recebemos o seu pedido em breve entraremos em contato!</p>
+            <h1>Compra realizada com sucesso!</h1> 
+            <p>Nós recebemos o seu pedido em breve entraremos em contato.</p>
         </div>
     </div>
     </>

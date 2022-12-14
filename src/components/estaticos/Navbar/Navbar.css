@@ -18,3 +18,22 @@
   color: white;
   margin: 2%;
 }
+.navbar_search{
+  display: flex;
+  margin-left: 60%;
+
+}
+#navbar_search_input{
+  height: 32px;
+  border-radius: 6px;
+  margin-right: 6px;
+}
+#navbar_search_button{
+  border-radius: 6px;
+  border: none;
+  height: 34px;
+}
+.foto{
+  display:flex;
+  width: 30px;
+}

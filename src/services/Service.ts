@@ -36,3 +36,7 @@ export const put = async(url: any, dados: any, setDado: any, header: any) => {
 export const deleteNome = async(url: any,header: any) => { 
     await api.delete(url,header)
 }
+export const alterarCadastro = async (url: any, dados: any, setDado: any) => {
+    const resposta = await api.post(url, dados)
+    setDado(resposta.data)
+}

@@ -1,0 +1,38 @@
+*{
+    /* cursor: none!important; */
+    caret-color: transparent
+
+
+
+}
+#container {
+    text-align: center;
+    padding: 40px 0;
+    background: #EBF0F5; 
+   
+  }
+  i {
+    /* color: #9ABC66; */
+    color: #26342f;
+    color: #85da56;
+    font-size: 100px;
+    line-height: 200px;
+    margin-left: 50px;
+  }
+  #card {
+    background: white;
+    padding: 60px;
+    border-radius: 4px;
+    box-shadow: 0 2px 3px #C8D0D8;
+    display: grid;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  #circulo{
+    border-radius:200px; 
+    height:200px; 
+    width:200px; 
+    background:#e3f0d7; 
+    margin:0 auto;
+  }

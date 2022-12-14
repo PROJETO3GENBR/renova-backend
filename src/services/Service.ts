@@ -45,3 +45,7 @@ export const cadastroProduto = async(url: any,dados: any, setDado: any, header: 
     const resposta = await api.post(url, dados, setDado)
     setDado(resposta.data)
 }
+export const alterarCadastro = async (url: any, dados: any, setDado: any) => {
+    const resposta = await api.post(url, dados)
+    setDado(resposta.data)
+}

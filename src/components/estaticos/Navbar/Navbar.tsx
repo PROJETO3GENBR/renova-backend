@@ -28,20 +28,27 @@ export default function Navbar() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <AppBar  elevation={0} id='navbar' position="static">
+       <div className={classes.root}>
+      <AppBar elevation={0} id='navbar' position="static">
         <Toolbar>
 
-          <a href='/home'>
+      
+            <a href='/home'>
 
             <img id='logo' src="https://raw.githubusercontent.com/PROJETO3GENBR/renova-visual-archives/main/logo/renovasemfundo.png" alt="logo" />
           </a>
+ <div>
+          <form className="navbar_search" action="/action_page.php">
+            <input id='navbar_search_input' type="text" placeholder="Search.." name="search"/>
+              <button id='navbar_search_button' type="submit"><i className="fa fa-search"></i>Buscar</button>
+          </form>
+</div>
 
-          <div id='botoes'>
-                  <Button id='botao_cfg' href='/login'>Configurações</Button>
-                  <Button id='botao_nav' href='/home'>Home</Button>
-                  <Button id='botao_nav' href='/login'>Login</Button> 
-
+          <div id="botoes">
+            <Button id='botao_nav' href='/home'>Home</Button>
+            <Button id='botao_nav' href='/login'>Login</Button>
+            <Button id='botao_nav' href='/atualizar'>
+              <img className="foto" src="https://th.bing.com/th/id/R.948119e500cdecc222c33f3fc2edf3e4?rik=r0UFh5vihjWX4A&pid=ImgRaw&r=0"/></Button>
           </div>
 
 

@@ -7,6 +7,7 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import './Navbar.css'
+import { Box, Grid } from '@material-ui/core';
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -37,8 +38,9 @@ export default function Navbar() {
           </a>
 
           <div id='botoes'>
-            <Button id='botao_nav' href='/home'>Home</Button>
-            <Button id='botao_nav' href='/login'>Login</Button>
+                  <Button id='botao_cfg' href='/login'>Configurações</Button>
+                  <Button id='botao_nav' href='/home'>Home</Button>
+                  <Button id='botao_nav' href='/login'>Login</Button> 
 
           </div>
 

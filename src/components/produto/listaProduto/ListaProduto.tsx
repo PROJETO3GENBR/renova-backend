@@ -58,7 +58,10 @@ function ListaProduto() {
                       {produto.nome}
                     </Typography>
                     <Typography variant="body2" component="p">
-                      {produto.categoria?.descricao}
+                      {produto.categoria?.categoria_composto}
+                    </Typography>
+                    <Typography variant="body2" component="p">
+                      {produto.categoria?.categoria_eletronico}
                     </Typography>
                   </CardContent>
                   <CardActions>

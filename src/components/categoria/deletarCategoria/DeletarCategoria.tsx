@@ -4,7 +4,7 @@ import {Box} from '@mui/material';
 import './DeletarCategoria.css';
 import { useNavigate, useParams } from 'react-router-dom';
 import useLocalStorage from 'react-use-localstorage';
-import { buscaNome, deleteNome } from '../../../services/Service';
+import { buscaId, deleteId } from '../../../services/Service';
 import Categoria from '../../../models/Categoria';
 
 function DeletarCategoria() {

@@ -61,8 +61,11 @@ function Home() {
                       <Typography variant="h5" component="h2">
                         {`R$: ${produto.preco}`}
                       </Typography>
-                      <Typography variant="body2" component="p">
-                        {produto.categoria?.descricao}
+                      <Typography variant="h5" component="h2">
+                        {produto.categoria?.categoria_composto}
+                      </Typography>
+                      <Typography variant="h5" component="h2">
+                        {produto.categoria?.categoria_eletronico}
                       </Typography>
                     </CardContent>
                     <CardActions>

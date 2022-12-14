@@ -3,8 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Footer } from './components/estaticos/footer/Footer';
 import Login from './Paginas/Login/Login'
-import  Card  from './components/Card/Card';
-import  CadastroCliente  from './Paginas/cadastroCliente/CadastroCliente';
+import CadastroCliente  from './Paginas/cadastroCliente/CadastroCliente';
 import Navbar from './components/estaticos/Navbar/Navbar';
 import ListaCategoria from './components/categoria/listaCategoria/ListaCategoria';
 import CadastroCategoria from './components/categoria/cadastroCategoria/CadastroCategoria';

@@ -1,5 +1,6 @@
 interface Categoria {
-    id: number;
-    descricao: string
+    id: number,
+    categoria_composto: boolean | null;
+    categoria_eletronico: boolean | null;
 }
 export default Categoria;

@@ -19,6 +19,7 @@
   margin: 2%;
 }
 .navbar_search{
+  display: flex;
   margin-left: 60%;
 
 }
@@ -31,4 +32,8 @@
   border-radius: 6px;
   border: none;
   height: 34px;
+}
+.foto{
+  display:flex;
+  width: 30px;
 }

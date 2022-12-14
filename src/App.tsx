@@ -14,6 +14,7 @@ import CadastroProduto from './components/produto/cadastroProduto/CadastroProdut
 import ListaProduto from './components/produto/listaProduto/ListaProduto';
 import Home from './Paginas/Home/Home';
 import { Produto } from './Paginas/Produto/Produto';
+import AlterarCadastro from './Paginas/alterarCadastro/AlterarCadastro';
 
 function App() {
   return (
@@ -33,7 +34,7 @@ function App() {
             <Route path="/formularioProduto" element={<CadastroProduto/>} />
             <Route path="/formularioProduto/:id" element={<CadastroProduto />} />
             <Route path="/deletarProduto/:id" element={<DeletarProduto />} />
-
+            <Route path="/atualizar" element={<AlterarCadastro/>} />
         </Routes>
       <Footer />
     </Router>

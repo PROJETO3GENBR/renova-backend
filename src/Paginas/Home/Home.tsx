@@ -15,12 +15,25 @@ function Home() {
     if (token == "") {
       alert("Você precisa estar logado")
       navigate("/login")
+
     }
   }, [token])
 
+  async function getPost() {
+    await busca("/produto", setProduto, {
+      headers: {
+        'Authorization': token
+      }
+    })
+  }
+
   useEffect(() => {
-    //getPost()
-  }, [produto.length]);
+
+    getPost()
+
+  }, [produto.length])
+
+
 
   return (
     <>

@@ -11,14 +11,10 @@ import DeletarCategoria from './components/categoria/deletarCategoria/DeletarCat
 import {DeletarProduto} from './components/produto/deletarProduto/DeletarProduto';
 import CadastroProduto from './components/produto/cadastroProduto/CadastroProduto';
 import {ListaProduto} from './components/produto/listaProduto/ListaProduto';
-import { Home } from './Paginas/Home/Home';
 import { VendaProduto } from './Paginas/Produto/Produto';
 import { SucessPage } from './Paginas/SucessPage/SucessPage';
 import AlterarCadastro from './Paginas/alterarCadastro/AlterarCadastro';
 import { Home } from './Paginas/Home/Home';
-import { ListaProduto } from './components/produto/listaProduto/ListaProduto';
-
-
 
 function App() {
   return (

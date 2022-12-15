@@ -40,7 +40,7 @@ export default function Navbar() {
  <div>
           <form className="navbar_search" action="/action_page.php">
             <input id='navbar_search_input' type="text" placeholder="Search.." name="search"/>
-              <button id='navbar_search_button' type="submit"><i className="fa fa-search"></i>Buscar</button>
+              <button id='navbar_search_button' type="submit">Buscar</button>
           </form>
 </div>
 
@@ -48,7 +48,7 @@ export default function Navbar() {
             <Button id='botao_nav' href='/home'>Home</Button>
             <Button id='botao_nav' href='/login'>Login</Button>
             <Button id='botao_nav' href='/atualizar'>
-              <img className="foto" src="https://th.bing.com/th/id/R.948119e500cdecc222c33f3fc2edf3e4?rik=r0UFh5vihjWX4A&pid=ImgRaw&r=0"/></Button>
+              <img className="foto" src="https://th.bing.com/th/id/R.948119e500cdecc222c33f3fc2edf3e4?rik=r0UFh5vihjWX4A&pid=ImgRaw&r=0" alt='' /></Button>
           </div>
 
 

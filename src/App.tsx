@@ -24,9 +24,9 @@ import Perfil from './Paginas/Perfil/Perfil';
 function App() {
   return (
     <Router>
+      <div style={{minHeight: 'calc(100vh - 100px)'}} >
       <Navbar />
         <Routes>
-       
             <Route path="/" element={<Login />} />
             <Route path='/home' element={<Home />} />
             <Route path='/cadastrar' element={<CadastroCliente />} />
@@ -45,6 +45,7 @@ function App() {
             <Route path="/listaproduto" element={<ListaProduto/>} />
             <Route path="/perfil" element={<Perfil/>}/>
         </Routes>
+        </div>
       <Footer />
     </Router>
   );

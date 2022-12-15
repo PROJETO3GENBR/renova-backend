@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import { AppBar, Tab, Tabs, Typography, Box } from '@material-ui/core';
 import { TabContext, TabPanel } from '@material-ui/lab';
 import './TabProduto.css';
-import ListaProduto from '../listaProduto/ListaProduto';
+import {ListaProduto} from '../listaProduto/ListaProduto';
 
 
 function TabProduto() {
@@ -32,4 +32,4 @@ function TabProduto() {
     </>
   );
 }
-export default TabProduto;
+export {TabProduto};

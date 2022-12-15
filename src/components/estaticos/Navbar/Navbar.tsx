@@ -37,12 +37,12 @@ export default function Navbar() {
 
             <img id='logo' src="https://raw.githubusercontent.com/PROJETO3GENBR/renova-visual-archives/main/logo/renovasemfundo.png" alt="logo" />
           </a>
- <div>
+ {/* <div>
           <form className="navbar_search" action="/action_page.php">
             <input id='navbar_search_input' type="text" placeholder="Search.." name="search"/>
               <button id='navbar_search_button' type="submit">Buscar</button>
           </form>
-</div>
+</div> */}
 
           <div id="botoes">
             <Button id='botao_nav' href='/home'>Home</Button>

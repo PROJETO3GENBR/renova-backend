@@ -20,25 +20,16 @@ function Home() {
   }, [token])
 
   async function getPost() {
-    await busca("/produto", setProduto, {
-      headers: {
-        'Authorization': token
-      }
-    })
+    await busca("/produto", setProduto, { Authorization: token })
   }
-
   useEffect(() => {
-
     getPost()
-
-  }, [produto.length])
-
-
-
+  }, [produto.length]);
   return (
     <>
+    
       <Grid container>
-        {
+        { 
           produto.map(produto => (
             <Grid item xs={6} sm={4} md={3} >
               <Box m={2} >
@@ -74,12 +65,12 @@ function Home() {
                     <Box display="flex" justifyContent="center" mb={1.5}>
 
                       {/* <Link to={`/formularioProduto/${produto.id}`} className="text-decorator-none" >
-                          <Box mx={1}>
-                            <Button variant="contained" className="marginLeft" size='small' color="primary" >
-                              atualizar
-                            </Button>
-                          </Box>
-                        </Link> */}
+                        <Box mx={1}>
+                          <Button variant="contained" className="marginLeft" size='small' color="primary" >
+                            atualizar
+                          </Button>
+                        </Box>
+                      </Link> */}
                       <Link to={`/produto/${produto.id}`} className="text-decorator-none">
                         <Box mx={1}>
                           <Button variant="contained" size='medium' color="secondary">
@@ -96,7 +87,7 @@ function Home() {
         }
       </Grid>
     </>
-  )
+  );
 }
 
-export { Home };
+export {Home} ;

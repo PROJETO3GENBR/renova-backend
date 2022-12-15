@@ -15,7 +15,10 @@ import { Home } from './Paginas/Home/Home';
 import { VendaProduto } from './Paginas/Produto/Produto';
 import { SucessPage } from './Paginas/SucessPage/SucessPage';
 import AlterarCadastro from './Paginas/alterarCadastro/AlterarCadastro';
-import { TabProduto } from './components/produto/tabprodutos/TabProduto';
+import { Home } from './Paginas/Home/Home';
+import { ListaProduto } from './components/produto/listaProduto/ListaProduto';
+
+
 
 function App() {
   return (

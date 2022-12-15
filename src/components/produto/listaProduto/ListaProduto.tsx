@@ -37,38 +37,66 @@ function ListaProduto() {
 
   return (
     <>
-      <Grid container>
-        {
-          produto.map(produto => (
-            <main id='main_produto'>
-        
     
-          <div id='product_cartao_buy'>
-            <h1 id='product_name_buy'> {produto.nome} </h1>
-            <img id='product_image_buy' src='https://www.amityinternational.com/wp-content/uploads/2018/12/amity-place-holder.jpg' alt='' title='' />
-            <div id='product_button_price'>
-            <Button  href='/SucessPage' id='product_button_buy' variant="contained" size='medium' color="secondary">
-              comprar
-            </Button>
-            <p> {`R$: ${produto.preco}`}</p>
-            </div>
-          </div>
+    <Grid container>
+      { 
+        produto.map(produto => (
+          <Grid item xs={6} sm={4} md={3} >
+            <Box m={2} >
+              <Card variant="outlined">
+                <CardContent>
+                  <CardMedia
+                    component="img"
+                    height="140"
+                    image={produto.foto}
+                    alt="#"
+                  />
+                  <Typography color="textSecondary" gutterBottom>
+                    Produtos
+                  </Typography>
 
+                  <Typography className="bold" variant="h5" component="h2">
+                    {produto.nome}
+                  </Typography>
+                  <Typography variant="h6" component="h2">
+                    {produto.descricao}
+                  </Typography>
+                  <Typography variant="h5" component="h2">
+                    {`R$: ${produto.preco}`}
+                  </Typography>
+                  <Typography variant="h5" component="h2">
+                    {produto.categoria?.categoria_composto}
+                  </Typography>
+                  <Typography variant="h5" component="h2">
+                    {produto.categoria?.categoria_eletronico}
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Box display="flex" justifyContent="center" mb={1.5}>
 
-        <div id='sub_product_buy'>
-          <div id='sub_product_desc'> Descrição do Produto</div>
-          <div id='sub_product_desc_text'>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, commodi repellat rem sit est at corrupti exercitationem ullam architecto veniam consequuntur voluptas, temporibus officia optio totam alias asperiores odio vitae.
-            </p>
-          </div>
-        </div>
-
-      </main>
-          ))
-        }
-      </Grid>
-    </>
+                    {/* <Link to={`/formularioProduto/${produto.id}`} className="text-decorator-none" >
+                      <Box mx={1}>
+                        <Button variant="contained" className="marginLeft" size='small' color="primary" >
+                          atualizar
+                        </Button>
+                      </Box>
+                    </Link> */} 
+                    <Link to={`/deletarproduto/${produto.id}`} className="text-decorator-none">
+                      <Box mx={1}>
+                        <Button variant="contained" size='medium'>
+                          deletar
+                        </Button>
+                      </Box>
+                    </Link>
+                  </Box>
+                </CardActions>
+              </Card>
+            </Box>
+          </Grid>
+        ))
+      }
+    </Grid>
+  </>
   )
 }
 

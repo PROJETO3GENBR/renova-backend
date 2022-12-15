@@ -40,9 +40,10 @@ export default function Navbar() {
 
     navigate('/login');
   }
-  let conteudo;
-  if(token!=''){
-    conteudo=<div className={classes.root}>
+  
+  
+  return (
+    <div className={classes.root}>
     <AppBar elevation={0} id='navbar' position="static">
       <Toolbar>
 
@@ -60,7 +61,7 @@ export default function Navbar() {
 
           <div id="botoes">
             <Button id='botao_nav' href='/home'>Home</Button>
-            <Button id='botao_nav' href='/login'>Login</Button>
+            <Button id='botao_nav' href='/logout'>Login</Button>
             <Button  href='/perfil'>
               <img id='settings_svg'  src='https://i.imgur.com/IKYw1jn.png'   alt=''/>
             </Button>
@@ -70,14 +71,5 @@ export default function Navbar() {
       </Toolbar>
     </AppBar>
   </div>
-  }
-  else{
-    conteudo='';
-  }
-  
-  return (
-    <>
-       {conteudo}
-    </>
   );
 }

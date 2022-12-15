@@ -15,6 +15,7 @@ import { SucessPage } from './Paginas/SucessPage/SucessPage';
 import AlterarCadastro from './Paginas/alterarCadastro/AlterarCadastro';
 import { Home } from './Paginas/Home/Home';
 import { ListaProduto } from './components/produto/listaProduto/ListaProduto';
+import AtualizarProduto from './components/produto/atualizarProduto/AtualizarProduto';
 
 
 
@@ -36,6 +37,7 @@ function App() {
             <Route path="/formularioProduto" element={<CadastroProduto/>} />
             <Route path="/formularioProduto/:id" element={<CadastroProduto />} />
             <Route path="/deletarProduto/:id" element={<DeletarProduto />} />
+            {/* <Route path="/produto" element={<AtualizarProduto />} /> */}
             <Route path="/SucessPage" element={<SucessPage />} />
             <Route path="/atualizar" element={<AlterarCadastro/>} />
             <Route path="/listaproduto" element={<ListaProduto/>} />

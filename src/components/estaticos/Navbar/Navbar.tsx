@@ -48,8 +48,8 @@ export default function Navbar() {
           <div id="botoes">
             <Button id='botao_nav' href='/home'>Home</Button>
             <Button id='botao_nav' href='/login'>Login</Button>
-            <Button id='botao_nav' href='/perfil'>
-              <img id='settings_svg' src='https://www.svgrepo.com/show/26781/settings.svg'   alt=''></img>
+            <Button  href='/perfil'>
+              <img id='settings_svg'  src='https://i.imgur.com/IKYw1jn.png'   alt=''/>
             </Button>
           </div>
 

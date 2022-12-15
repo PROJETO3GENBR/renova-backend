@@ -15,8 +15,7 @@ import { Home } from './Paginas/Home/Home';
 import { VendaProduto } from './Paginas/Produto/Produto';
 import { SucessPage } from './Paginas/SucessPage/SucessPage';
 import AlterarCadastro from './Paginas/alterarCadastro/AlterarCadastro';
-import { Home } from './Paginas/Home/Home';
-import { ListaProduto } from './components/produto/listaProduto/ListaProduto';
+
 
 
 

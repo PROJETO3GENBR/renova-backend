@@ -8,6 +8,8 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import './Navbar.css'
 import { Box, Grid } from '@material-ui/core';
+import useLocalStorage from 'react-use-localstorage';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -26,23 +28,34 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 export default function Navbar() {
+  
   const classes = useStyles();
 
-  return (
-       <div className={classes.root}>
-      <AppBar elevation={0} id='navbar' position="static">
-        <Toolbar>
+  const navigate=useNavigate()
+  const [token, setToken] = useLocalStorage('token');
 
-      
-            <a href='/home'>
+  function logout(){
+    setToken('');
+    alert('usuário deslogado!');
 
-            <img id='logo' src="https://raw.githubusercontent.com/PROJETO3GENBR/renova-visual-archives/main/logo/renovasemfundo.png" alt="logo" />
-          </a>
- {/* <div>
-          <form className="navbar_search" action="/action_page.php">
-            <input id='navbar_search_input' type="text" placeholder="Search.." name="search"/>
-              <button id='navbar_search_button' type="submit">Buscar</button>
-          </form>
+    navigate('/login');
+  }
+  let conteudo;
+  if(token!=''){
+    conteudo=<div className={classes.root}>
+    <AppBar elevation={0} id='navbar' position="static">
+      <Toolbar>
+
+    
+          <a href='/home'>
+
+          <img id='logo' src="https://raw.githubusercontent.com/PROJETO3GENBR/renova-visual-archives/main/logo/renovasemfundo.png" alt="logo" />
+        </a>
+{/* <div>
+        <form className="navbar_search" action="/action_page.php">
+          <input id='navbar_search_input' type="text" placeholder="Search.." name="search"/>
+            <button id='navbar_search_button' type="submit">Buscar</button>
+        </form>
 </div> */}
 
           <div id="botoes">
@@ -54,8 +67,17 @@ export default function Navbar() {
           </div>
 
 
-        </Toolbar>
-      </AppBar>
-    </div>
+      </Toolbar>
+    </AppBar>
+  </div>
+  }
+  else{
+    conteudo='';
+  }
+  
+  return (
+    <>
+       {conteudo}
+    </>
   );
 }

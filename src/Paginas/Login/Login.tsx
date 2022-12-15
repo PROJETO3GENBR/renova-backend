@@ -29,7 +29,7 @@ function Login() {
 
             useEffect(()=>{
                 if(token != ''){
-                    navigate('/home')
+                    navigate('/login')
                 }
             }, [token])
 

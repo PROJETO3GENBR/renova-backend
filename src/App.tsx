@@ -15,11 +15,14 @@ import { VendaProduto } from './Paginas/Produto/Produto';
 import { SucessPage } from './Paginas/SucessPage/SucessPage';
 import AlterarCadastro from './Paginas/alterarCadastro/AlterarCadastro';
 import { Home } from './Paginas/Home/Home';
-import AtualizarProduto from './components/produto/atualizarProduto/AtualizarProduto';
 import Perfil from './Paginas/Perfil/Perfil';
+<<<<<<< HEAD
 import {Provider} from 'react-redux';
 import store from './store/store';
 
+=======
+import { AtualizarProduto } from './components/produto/atualizarProduto/AtualizarProduto';
+>>>>>>> e90661329c9e3f8cadc16b63fecccaf22e3fe99f
 
 
 
@@ -28,10 +31,10 @@ function App() {
   return (
     <Provider store={store}>
     <Router>
+      <div style={{minHeight: 'calc(100vh - 100px)'}} >
       <Navbar />
       <div style={{ minHeight: '100vh' }}>
         <Routes>
-       
             <Route path="/" element={<Login />} />
             <Route path='/home' element={<Home />} />
             <Route path='/cadastrar' element={<CadastroCliente />} />
@@ -44,7 +47,7 @@ function App() {
             <Route path="/formularioProduto" element={<CadastroProduto/>} />
             <Route path="/formularioProduto/:id" element={<CadastroProduto />} />
             <Route path="/deletarProduto/:id" element={<DeletarProduto />} />
-            {/* <Route path="/produto" element={<AtualizarProduto />} /> */}
+            <Route path="/atualizarProduto/:id" element={<AtualizarProduto/>} />
             <Route path="/SucessPage" element={<SucessPage />} />
             <Route path="/atualizar" element={<AlterarCadastro/>} />
             <Route path="/listaproduto" element={<ListaProduto/>} />

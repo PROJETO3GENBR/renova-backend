@@ -21,9 +21,9 @@
   }
   #card {
     background: white;
-    padding: 60px;
+    padding: 10%;
     border-radius: 4px;
-    box-shadow: 0 2px 3px #C8D0D8;
+    /* box-shadow: 0 2px 3px #C8D0D8; */
     display: grid;
     justify-content: center;
     margin: 0 auto;

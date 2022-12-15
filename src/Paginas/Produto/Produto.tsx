@@ -14,7 +14,7 @@ function Produto() {
             <h1 id='product_name_buy'> Produto Placeholder </h1>
             <img id='product_image_buy' src='https://www.amityinternational.com/wp-content/uploads/2018/12/amity-place-holder.jpg' alt='' title='' />
             <div id='product_button_price'>
-            <Button id='product_button_buy' variant="contained" size='medium' color="secondary">
+            <Button  href='/SucessPage' id='product_button_buy' variant="contained" size='medium' color="secondary">
               comprar
             </Button>
             <p>R$ 48,00</p>

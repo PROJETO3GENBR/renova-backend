@@ -11,10 +11,12 @@ import DeletarCategoria from './components/categoria/deletarCategoria/DeletarCat
 import DeletarProduto from './components/produto/deletarProduto/DeletarProduto';
 import CadastroProduto from './components/produto/cadastroProduto/CadastroProduto';
 import ListaProduto from './components/produto/listaProduto/ListaProduto';
-import { Home } from './Paginas/Home/Home';
 import { Produto } from './Paginas/Produto/Produto';
 import { SucessPage } from './Paginas/SucessPage/SucessPage';
 import AlterarCadastro from './Paginas/alterarCadastro/AlterarCadastro';
+import { Home } from './Paginas/Home/Home';
+
+
 
 function App() {
   return (
@@ -23,7 +25,7 @@ function App() {
         <Routes>
        
             <Route path="/" element={<Login />} />
-            <Route path='/home' element={<Home />} />
+            <Route path="/home" element={<Home />} />
             <Route path='/cadastrar' element={<CadastroCliente />} />
             <Route path='/login' element={<Login />} />
             <Route path="/categoria" element={<ListaCategoria />} />

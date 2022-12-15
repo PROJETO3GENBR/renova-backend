@@ -17,14 +17,19 @@ import AlterarCadastro from './Paginas/alterarCadastro/AlterarCadastro';
 import { Home } from './Paginas/Home/Home';
 import AtualizarProduto from './components/produto/atualizarProduto/AtualizarProduto';
 import Perfil from './Paginas/Perfil/Perfil';
+import {Provider} from 'react-redux';
+import store from './store/store';
+
 
 
 
 
 function App() {
   return (
+    <Provider store={store}>
     <Router>
       <Navbar />
+      <div style={{ minHeight: '100vh' }}>
         <Routes>
        
             <Route path="/" element={<Login />} />
@@ -45,8 +50,10 @@ function App() {
             <Route path="/listaproduto" element={<ListaProduto/>} />
             <Route path="/perfil" element={<Perfil/>}/>
         </Routes>
+        </div>
       <Footer />
     </Router>
+    </Provider>
   );
 }
 

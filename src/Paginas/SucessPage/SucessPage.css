@@ -36,3 +36,8 @@
     background:#e3f0d7; 
     margin:0 auto;
   }
+
+  #footer{
+    position: absolute;
+    bottom: 0px;
+  }

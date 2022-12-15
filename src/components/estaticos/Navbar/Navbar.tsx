@@ -48,7 +48,7 @@ export default function Navbar() {
             <Button id='botao_nav' href='/home'>Home</Button>
             <Button id='botao_nav' href='/login'>Login</Button>
             <Button id='botao_nav' href='/atualizar'>
-              <img className="foto" src="https://th.bing.com/th/id/R.948119e500cdecc222c33f3fc2edf3e4?rik=r0UFh5vihjWX4A&pid=ImgRaw&r=0"/></Button>
+              <img className="foto" src="https://th.bing.com/th/id/R.7ea4af7d8401d2b43ee841bfa2abe89d?rik=NQOIh2MeArGQtA&pid=ImgRaw&r=0"/></Button>
           </div>
 
 

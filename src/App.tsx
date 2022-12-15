@@ -14,6 +14,7 @@ import ListaProduto from './components/produto/listaProduto/ListaProduto';
 import { Home } from './Paginas/Home/Home';
 import { Produto } from './Paginas/Produto/Produto';
 import { SucessPage } from './Paginas/SucessPage/SucessPage';
+import AlterarCadastro from './Paginas/alterarCadastro/AlterarCadastro';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
             <Route path="/deletarProduto/:id" element={<DeletarProduto />} />
             <Route path="/deletarProduto/:id" element={<DeletarProduto />} />
             <Route path="/SucessPage" element={<SucessPage />} />
+            <Route path="/atualizar" element={<AlterarCadastro/>} />
         </Routes>
       <Footer />
     </Router>

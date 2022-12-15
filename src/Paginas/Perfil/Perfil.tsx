@@ -58,7 +58,7 @@ function Perfil() {
         
       </div>
       <Button id='botao_perfil' href='/formularioProduto'>CADASTRAR PRODUTO</Button>
-      {/* <Button id='botao_nav' href='/formularioProduto'>ATUALIZAR PRODUTO</Button> */}
+       <Button id='botao_nav' href='/listaproduto'>ATUALIZAR PRODUTO</Button> 
       <Button id='botao_perfil' href='/atualizar'>ATUALIZAR PERFIL</Button>
       <Button id='botao_perfil_delete' href='/listaproduto' >DELETAR PRODUTO</Button>
     </main>

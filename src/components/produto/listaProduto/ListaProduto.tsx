@@ -37,67 +37,68 @@ function ListaProduto() {
 
   return (
     <>
-    
-    <Grid container>
-      { 
-        produto.map(produto => (
-          <Grid item xs={6} sm={4} md={3} >
-            <Box m={2} >
-              <Card variant="outlined">
-                <CardContent>
-                  <CardMedia
-                    component="img"
-                    height="140"
-                    image={produto.foto}
-                    alt="#"
-                  />
-                  <Typography color="textSecondary" gutterBottom>
-                    Produtos
-                  </Typography>
 
-                  <Typography className="bold" variant="h5" component="h2">
-                    {produto.nome}
-                  </Typography>
-                  <Typography variant="h6" component="h2">
-                    {produto.descricao}
-                  </Typography>
-                  <Typography variant="h5" component="h2">
-                    {`R$: ${produto.preco}`}
-                  </Typography>
-                  <Typography variant="h5" component="h2">
-                    {produto.categoria?.categoria_composto}
-                  </Typography>
-                  <Typography variant="h5" component="h2">
-                    {produto.categoria?.categoria_eletronico}
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Box display="flex" justifyContent="center" mb={1.5}>
+      <Grid container>
+        {
+          produto.map(produto => (
+            <Grid item xs={6} sm={4} md={3} >
+              <Box m={2} >
+                <Card variant="outlined">
+                  <CardContent>
+                    <CardMedia
+                      component="img"
+                      height="140"
+                      image={produto.foto}
+                      alt="#"
+                    />
+                    <Typography color="textSecondary" gutterBottom>
+                      Produtos
+                    </Typography>
 
-                    {/* <Link to={`/formularioProduto/${produto.id}`} className="text-decorator-none" >
+                    <Typography className="bold" variant="h5" component="h2">
+                      {produto.nome}
+                    </Typography>
+                    <Typography variant="h6" component="h2">
+                      {produto.descricao}
+                    </Typography>
+                    <Typography variant="h5" component="h2">
+                      {`R$: ${produto.preco}`}
+                    </Typography>
+                    <Typography variant="h5" component="h2">
+                      {produto.categoria?.categoria_composto}
+                    </Typography>
+                    <Typography variant="h5" component="h2">
+                      {produto.categoria?.categoria_eletronico}
+                    </Typography>
+                  </CardContent>
+                  <CardActions>
+                    <Box display="flex" justifyContent="center" mb={1.5}>
+
+                     <Link to={`/atualizarproduto/${produto.id}`} className="text-decorator-none" >
                       <Box mx={1}>
-                        <Button variant="contained" className="marginLeft" size='small' color="primary" >
+                        <Button variant="contained" className="marginLeft" size='medium' color="primary" >
                           atualizar
                         </Button>
                       </Box>
-                    </Link> */} 
-                    <Link to={`/deletarproduto/${produto.id}`} className="text-decorator-none">
-                      <Box mx={1}>
-                        <Button variant="contained" size='medium'>
-                          deletar
-                        </Button>
-                      </Box>
-                    </Link>
-                  </Box>
-                </CardActions>
-              </Card>
-            </Box>
-          </Grid>
-        ))
-      }
-    </Grid>
-  </>
+                    </Link> 
+                      <Link to={`/deletarproduto/${produto.id}`} className="text-decorator-none">
+                        <Box mx={1}>
+                          <Button variant="contained" size='medium'>
+                            deletar
+                          </Button>
+                      
+                        </Box>
+                      </Link>
+                    </Box>
+                  </CardActions>
+                </Card>
+              </Box>
+            </Grid>
+          ))
+        }
+      </Grid>
+    </>
   )
 }
 
-export  {ListaProduto};
+export { ListaProduto };

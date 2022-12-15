@@ -32,7 +32,7 @@ export class ProdutoController {
       return this.produtoService.create(produto);
     }
 
-    @Put()
+    @Put('/:id')
     @HttpCode(HttpStatus.OK)
     update(@Body()produto: Produto): Promise<Produto>{
       return this.produtoService.update(produto);

@@ -10,6 +10,7 @@ import './Navbar.css'
 import { Box, Grid } from '@material-ui/core';
 
 
+
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
@@ -47,8 +48,9 @@ export default function Navbar() {
           <div id="botoes">
             <Button id='botao_nav' href='/home'>Home</Button>
             <Button id='botao_nav' href='/login'>Login</Button>
-            <Button id='botao_nav' href='/atualizar'>
-              <img className="foto" src="https://th.bing.com/th/id/R.7ea4af7d8401d2b43ee841bfa2abe89d?rik=NQOIh2MeArGQtA&pid=ImgRaw&r=0" alt=''/></Button>
+            <Button id='botao_nav' href='/perfil'>
+              <img id='settings_svg' src='https://www.svgrepo.com/show/26781/settings.svg'   alt=''></img>
+            </Button>
           </div>
 
 

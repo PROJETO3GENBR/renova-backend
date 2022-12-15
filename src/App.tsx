@@ -15,6 +15,7 @@ import { Home } from './Paginas/Home/Home';
 import { VendaProduto } from './Paginas/Produto/Produto';
 import { SucessPage } from './Paginas/SucessPage/SucessPage';
 import AlterarCadastro from './Paginas/alterarCadastro/AlterarCadastro';
+import Perfil from './Paginas/Perfil/Perfil';
 
 
 
@@ -40,6 +41,7 @@ function App() {
             <Route path="/SucessPage" element={<SucessPage />} />
             <Route path="/atualizar" element={<AlterarCadastro/>} />
             <Route path="/listaproduto" element={<ListaProduto/>} />
+            <Route path="/perfil" element={<Perfil/>}/>
         </Routes>
       <Footer />
     </Router>

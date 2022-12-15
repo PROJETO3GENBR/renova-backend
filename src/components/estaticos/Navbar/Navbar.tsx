@@ -40,7 +40,7 @@ export default function Navbar() {
  <div>
           <form className="navbar_search" action="/action_page.php">
             <input id='navbar_search_input' type="text" placeholder="Search.." name="search"/>
-              <button id='navbar_search_button' type="submit"><i className="fa fa-search"></i>Buscar</button>
+              <button id='navbar_search_button' type="submit">Buscar</button>
           </form>
 </div>
 

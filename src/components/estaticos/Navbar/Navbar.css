@@ -31,11 +31,13 @@
 
 #navbar_search_input{
   height: 32px;
+  border: none;
   border-radius: 6px;
   margin-right: 6px;
 }
 #navbar_search_button{
   border-radius: 6px;
+
   border: none;
   height: 34px;
 }

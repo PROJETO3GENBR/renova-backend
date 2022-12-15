@@ -93,4 +93,4 @@ function ListaProduto() {
   )
 }
 
-export default ListaProduto;
+export  {ListaProduto};

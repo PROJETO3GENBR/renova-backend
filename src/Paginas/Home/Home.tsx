@@ -15,6 +15,7 @@ function Home() {
     if (token == "") {
       alert("Você precisa estar logado")
       navigate("/login")
+
     }
   }, [token])
 

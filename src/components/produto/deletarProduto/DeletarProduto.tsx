@@ -84,4 +84,4 @@ function DeletarProduto() {
     </>
   );
 }
-export default DeletarProduto;
+export {DeletarProduto};

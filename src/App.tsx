@@ -8,13 +8,13 @@ import Navbar from './components/estaticos/Navbar/Navbar';
 import ListaCategoria from './components/categoria/listaCategoria/ListaCategoria';
 import CadastroCategoria from './components/categoria/cadastroCategoria/CadastroCategoria';
 import DeletarCategoria from './components/categoria/deletarCategoria/DeletarCategoria';
-import DeletarProduto from './components/produto/deletarProduto/DeletarProduto';
+import {DeletarProduto} from './components/produto/deletarProduto/DeletarProduto';
 import CadastroProduto from './components/produto/cadastroProduto/CadastroProduto';
-import ListaProduto from './components/produto/listaProduto/ListaProduto';
 import { Produto } from './Paginas/Produto/Produto';
 import { SucessPage } from './Paginas/SucessPage/SucessPage';
 import AlterarCadastro from './Paginas/alterarCadastro/AlterarCadastro';
 import { Home } from './Paginas/Home/Home';
+import { ListaProduto } from './components/produto/listaProduto/ListaProduto';
 
 
 
@@ -36,9 +36,9 @@ function App() {
             <Route path="/formularioProduto" element={<CadastroProduto/>} />
             <Route path="/formularioProduto/:id" element={<CadastroProduto />} />
             <Route path="/deletarProduto/:id" element={<DeletarProduto />} />
-            <Route path="/deletarProduto/:id" element={<DeletarProduto />} />
             <Route path="/SucessPage" element={<SucessPage />} />
             <Route path="/atualizar" element={<AlterarCadastro/>} />
+            <Route path="/listaproduto" element={<ListaProduto/>} />
         </Routes>
       <Footer />
     </Router>

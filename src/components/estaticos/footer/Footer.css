@@ -1,9 +1,11 @@
 .box1 {
     background: linear-gradient(91.11deg, #2E4052 64.69%, #182027 97.66%);
     display: flex;
+    
 }
 #renova_footer{
     width: 620px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 .icon_box{
     display: flex;

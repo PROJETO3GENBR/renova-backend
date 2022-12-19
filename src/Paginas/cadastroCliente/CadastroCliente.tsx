@@ -78,7 +78,7 @@ function CadastroCliente() {
                                     Cancelar
                                 </Button>
                             </Link>
-                            <Button type='submit' variant='contained' color='primary'>
+                            <Button type='submit' variant='contained' id='cad_btn_cadastrar'>
                                     Cadastrar
                             </Button>
                         </Box>

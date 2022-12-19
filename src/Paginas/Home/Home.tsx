@@ -26,21 +26,22 @@ function Home() {
           produto.map(produto => (
             <Grid item xs={6} sm={4} md={3} >
               <Box m={2} >
-                <Card variant="outlined">
+                <Card id='produto_card'>
                   <CardContent>
-                    <CardMedia
+
+                    <CardMedia className='produto_img'
                       component="img"
                       height="140"
                       image={produto.foto}
                       alt="#"
                     />
-                    <Typography color="textSecondary" gutterBottom>
-                      Produtos
-                    </Typography>
+                 
+                 
 
                     <Typography className="bold" variant="h5" component="h2">
                       {produto.nome}
                     </Typography>
+
                     <Typography variant="h6" component="h2">
                       {produto.descricao}
                     </Typography>
@@ -66,7 +67,7 @@ function Home() {
                       </Link> */}
                       <Link to={`/produto/${produto.id}`} className="text-decorator-none">
                         <Box mx={1}>
-                          <Button variant="contained" size='medium' color="secondary">
+                          <Button id='produto_button_comprar' variant="contained" size='medium'>
                             comprar
                           </Button>
                         </Box>

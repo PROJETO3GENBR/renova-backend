@@ -1,6 +1,24 @@
 html body {
   background: linear-gradient(107.56deg, #FFFFFF 36.46%, #ABABAB 100%);
 }
+#produto_card{
+  display: flex;
+  flex-direction: column;
+  outline: 1px solid rgb(136, 136, 136);
+  background: #2E4052;
+  color: white;
+  border: 0.5px solid #000000;
+  border-radius: 10px;
+  min-height: 370px;
+}
+.produto_img{
+  border-radius: 6px;
+}
+#produto_card #produto_button_comprar{
+  background-color: #2BAE5E;
+  color: white;
+  font-weight: 600;
+}
 
 .bold {
   font-weight: bold !important;

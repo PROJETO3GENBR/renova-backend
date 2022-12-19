@@ -45,7 +45,7 @@ function Home() {
                     <Typography variant="h6" component="h2">
                       {produto.descricao}
                     </Typography>
-                    <Typography variant="h5" component="h2">
+                    <Typography id='produto_card_preco' variant="h5" component="h2">
                       {`R$: ${produto.preco}`}
                     </Typography>
                     <Typography variant="h5" component="h2">

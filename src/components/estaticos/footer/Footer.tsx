@@ -14,11 +14,13 @@ function Footer (){
         <>
             <Grid container direction="row" justifyContent="center" alignItems="center">
                 <Grid alignItems="center" item xs={12}>
-                    <Box className='box1'>
-                        <Box paddingTop={1} display="flex" alignItems="center" justifyContent="center">
-                            <Typography variant="h5" align="center" gutterBottom className='textos'>Siga-nos nas redes sociais </Typography>
+                    <Box className='box1' display='flex'>
+                        
+                        <Box padding={2} display="flex"  justifyContent="left">
+                           <img id='renova_footer' src='https://i.imgur.com/oAGoVJG.png' alt='renova footer logo'/>
                         </Box>
-                        <Box display="flex" alignItems="center" justifyContent="center">
+                    <div className='box2'>
+                        <Box className='icon_box'>
                             <a href="https://github.com/PROJETO3GENBR" target="_blank">
                                 <GitHubIcon className='redes' />
                             </a>
@@ -32,16 +34,11 @@ function Footer (){
                                 <EmailIcon className='redes' />
                             </a>
                         </Box>
-                    </Box>
-                    <Box className='box2'>
-                        <Box paddingTop={1}>
-                            <Typography variant="subtitle2" align="center" gutterBottom className='textos'>© 2022 Copyright:</Typography>
-                        </Box>
-                        <Box>
-                            <a target="_blank" href="https://brasil.generation.org">
-                                <Typography variant="subtitle2" gutterBottom className='textos' align="center">brasil.renova.org</Typography>
-                            </a>
-                        </Box>
+                        <div id='texto'>
+                            
+                        Criado por Levy, Luna, Anderson, Herbert, Geovanni, Daniele e Lucas.
+                        </div>
+                        </div>
                     </Box>
                 </Grid>
             </Grid>

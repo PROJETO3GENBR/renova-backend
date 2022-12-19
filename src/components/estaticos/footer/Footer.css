@@ -1,11 +1,32 @@
 .box1 {
-    background-color: #2E4052;
+    background: linear-gradient(91.11deg, #2E4052 64.69%, #182027 97.66%);
+    display: flex;
+}
+#renova_footer{
+    width: 620px;
+}
+.icon_box{
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-evenly;
+    margin-left: 10px;
 }
 
-.box2 {
-    background-color: #2E4052;
-}
-
-.textos { 
+.redes{
     color: white;
+    width: 100%;
+}
+
+
+#texto{ 
+    color: white;
+    display: flex;
+    margin-top: 10%;
+    margin-left: 18%;
+    font-size: 12px;
+}
+.box2{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
 }

@@ -15,10 +15,15 @@
 }
 
 #botao_nav {
-  background-color: #072b47;
+  background-color: #2E4052;
   color: white;
   margin: 2%;
+  text-transform: uppercase;
+  border: 1px solid #2BAE5E;
+}
 
+#botao_nav:hover {
+  background-color: #2BAE5E;
 }
 
 #settings_svg{

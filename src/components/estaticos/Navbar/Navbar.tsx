@@ -43,7 +43,7 @@ export default function Navbar() {
 
   let button;
   if (token != '') {
-    button = <Button id='botao_nav' onClick={logout} >LOGOUT </Button>
+    button = <Button id='botao_nav' onClick={logout} >Sair </Button>
   } else {
     button = <Button id='botao_nav' href='/login'>Login</Button>
   }

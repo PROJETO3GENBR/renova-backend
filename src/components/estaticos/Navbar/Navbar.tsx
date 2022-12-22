@@ -48,7 +48,6 @@ export default function Navbar() {
     button = <Button id='botao_nav' href='/login'>Login</Button>
   }
 
-
   return (
     <div className={classes.root}>
       <AppBar elevation={0} id='navbar' position="static">

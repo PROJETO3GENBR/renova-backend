@@ -1,5 +1,6 @@
 html body {
   background: linear-gradient(107.56deg, #FFFFFF 36.46%, #ABABAB 100%);
+  background-attachment: fixed;
 }
 #produto_card{
   display: flex;
@@ -8,7 +9,7 @@ html body {
   background: #2E4052;
   color: white;
   border-radius: 10px;
-  min-height: 380px;
+  min-height: 450px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 .produto_img{
@@ -17,6 +18,9 @@ html body {
 #produto_card #produto_button_comprar{
   background-color: #2BAE5E;
   color: white;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 3%;
   font-weight: 600;
 }
 #produto_card_preco{

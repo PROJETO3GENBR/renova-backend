@@ -6,6 +6,7 @@ import useLocalStorage from 'react-use-localstorage';
 import { busca, buscaId, cadastroProduto } from '../../../services/Service';
 import Produto from '../../../models/Produto';
 import Categoria from '../../../models/Categoria';
+import { toast } from 'react-toastify';
 
 function CadastroProduto() {
 
@@ -63,9 +64,28 @@ function CadastroProduto() {
     try {
       await cadastroProduto(`/produto`, produto, setProduto, { Authorization: token })
 
-      alert('Produto cadastrado com sucesso!');
+    
+      toast.success('Produto cadastrado com sucesso!', {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        theme: "colored",
+        progress: undefined,
+        });
     } catch (error) {
-      alert('Dados inconsistentes. Erro ao cadastrar produto!');
+      toast.error('Dados inconsistentes. Erro ao cadastrar produto!', {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        theme: "colored",
+        progress: undefined,
+        });
     }
   }
 

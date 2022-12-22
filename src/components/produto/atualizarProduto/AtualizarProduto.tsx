@@ -8,7 +8,7 @@ import './AtualizarProduto.css';
 import Produto from '../../../models/Produto';
 import { busca, buscaId, put } from '../../../services/Service';
 import useLocalStorage from 'react-use-localstorage';
-
+import { toast } from 'react-toastify';
 
 function AtualizarProduto() {
 
@@ -71,7 +71,16 @@ function AtualizarProduto() {
 
         if (id !== undefined && produto.preco > 0) {
             await put(`/produto/${produto.id}`, produto, setProduto, { Authorization: token })
-            alert('Produto alterado com sucesso.')
+            toast.success('Produto alterado com sucesso.', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+                });
         }
         back ()
     }

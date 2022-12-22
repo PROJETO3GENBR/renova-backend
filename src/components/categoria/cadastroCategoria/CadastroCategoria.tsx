@@ -5,7 +5,7 @@ import './CadastroCategoria.css';
 import useLocalStorage from 'react-use-localstorage';
 import Categoria from '../../../models/Categoria';
 import { buscaNome, post, put } from '../../../services/Service';
-
+import { toast } from 'react-toastify';
 
 function CadastroCategoria() {
     let navigate = useNavigate();
@@ -19,7 +19,16 @@ function CadastroCategoria() {
 
     useEffect(() => {
         if (token == "") {
-            alert("Você precisa estar logado")
+            toast.error("Você precisa estar logado", {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+                });
             navigate("/login")
     
         }
@@ -59,14 +68,32 @@ function CadastroCategoria() {
                         'Authorization': token
                     }
                 })
-                alert('Categoria atualizada com sucesso');
+                toast.success('Categoria atualizada com sucesso', {
+                    position: "top-right",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: false,
+                    theme: "colored",
+                    progress: undefined,
+                    });
             } else {
                 post(`/tema`, categoria, setCategoria, {
                     headers: {
                         'Authorization': token
                     }
                 })
-                alert('Categoria cadastrada com sucesso');
+                toast.success('Categoria cadastrada com sucesso', {
+                    position: "top-right",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: false,
+                    theme: "colored",
+                    progress: undefined,
+                    });
             }
             back()
     

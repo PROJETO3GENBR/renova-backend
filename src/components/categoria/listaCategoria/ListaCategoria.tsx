@@ -7,6 +7,7 @@ import './ListaCategoria.css';
 import useLocalStorage from 'react-use-localstorage';
 import { useNavigate } from 'react-router-dom'
 import Categoria from '../../../models/Categoria';
+import { toast } from 'react-toastify';
 
 function ListaCategoria() {
   const [categoria, setCategoria] = useState<Categoria[]>([])
@@ -15,7 +16,16 @@ function ListaCategoria() {
 
   useEffect(()=>{
     if(token == ''){
-      alert("Você precisa estar logado")
+      toast.error("Você precisa estar logado", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        theme: "colored",
+        progress: undefined,
+        });
       navigate("/login")
     }
   }, [token])

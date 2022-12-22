@@ -78,11 +78,15 @@ export default function Navbar() {
             <Button id='botao_nav' href='/home'>Home</Button>
             {button}
 
+            {localStorage.getItem('token') ?
             <Button href='/perfil'>
               <img id='settings_svg' src='https://i.imgur.com/IKYw1jn.png' alt='' />
             </Button>
+            :
+            <></>
+            }
           </div>
-
+          
 
         </Toolbar>
       </AppBar>

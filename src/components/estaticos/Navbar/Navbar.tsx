@@ -10,7 +10,7 @@ import './Navbar.css'
 import { Box, Grid } from '@material-ui/core';
 import useLocalStorage from 'react-use-localstorage';
 import { useNavigate } from 'react-router-dom';
-
+import {toast} from 'react-toastify';
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -36,7 +36,16 @@ export default function Navbar() {
 
   function logout() {
     setToken('');
-    alert('usuário deslogado!');
+    toast.info('Usuário deslogado', {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: false,
+      theme: "colored",
+      progress: undefined,
+  });
 
     navigate('/login');
   }
@@ -69,11 +78,15 @@ export default function Navbar() {
             <Button id='botao_nav' href='/home'>Home</Button>
             {button}
 
+            {localStorage.getItem('token') ?
             <Button href='/perfil'>
               <img id='settings_svg' src='https://i.imgur.com/IKYw1jn.png' alt='' />
             </Button>
+            :
+            <></>
+            }
           </div>
-
+          
 
         </Toolbar>
       </AppBar>

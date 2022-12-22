@@ -7,6 +7,7 @@ import './ListaProduto.css';
 import useLocalStorage from 'react-use-localstorage';
 import { useNavigate } from 'react-router-dom'
 import Produto from '../../../models/Produto';
+import { toast } from 'react-toastify';
 
 function ListaProduto() {
   const [produto, setProduto] = useState<Produto[]>([])
@@ -15,7 +16,16 @@ function ListaProduto() {
 
   useEffect(() => {
     if (token == "") {
-      alert("Você precisa estar logado")
+      toast.error("Você precisa estar logado", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        theme: "colored",
+        progress: undefined,
+        });
       navigate("/login")
 
     }

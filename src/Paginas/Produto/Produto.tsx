@@ -6,7 +6,7 @@ import useLocalStorage from 'react-use-localstorage';
 import Produto from '../../models/Produto';
 import '../Produto/Produto.css';
 import { busca, buscaId } from './../../services/Service'
-
+import { toast } from 'react-toastify';
 
 
 
@@ -24,7 +24,16 @@ function VendaProduto() {
 
   useEffect(() => {
     if (token == "") {
-      alert("Você precisa estar logado")
+      toast.error("Você precisa estar logado", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        theme: "colored",
+        progress: undefined,
+        });
       navigate("/login")
 
     }

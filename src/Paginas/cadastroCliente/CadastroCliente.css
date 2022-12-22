@@ -13,10 +13,10 @@
 
 .btnCancelar{
     background: rgb(122,29,0);
-    background: linear-gradient(103deg, rgba(122,29,0,1) 0%, rgba(242,43,43,1) 98%);
 }
 #cad_btn_cadastrar{
     background: rgb(43,174,94);
-background: linear-gradient(103deg, rgba(43,174,94,1) 0%, rgba(88,196,90,1) 50%, rgba(133,218,86,1) 98%);
-font-weight: 600;
+}
+#cad_btn_cadastrar:hover{
+    background-color: #85da56
 }

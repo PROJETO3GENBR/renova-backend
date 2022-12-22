@@ -1,34 +1,47 @@
-.box1 {
-    background: linear-gradient(91.11deg, #2E4052 64.69%, #182027 97.66%);
-    display: flex;
-    
-}
-#renova_footer{
-    width: 620px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-.icon_box{
-    display: flex;
-    margin-top: 20px;
-    justify-content: space-evenly;
-    margin-left: 10px;
+footer {
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(91.11deg, #2E4052 13.63%, #182027 97.66%);
+  display: flex;
+
 }
 
-.redes{
-    color: white;
-    width: 100%;
+.item_list {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-left: 5%;
+  margin-right: 5%;
+  flex-wrap: wrap;
+  align-content: center;
 }
 
-
-#texto{ 
-    color: white;
-    display: flex;
-    margin-top: 10%;
-    margin-left: 18%;
-    font-size: 12px;
+.redes_list {
+  display: flex;
+  height: 64px;
+  justify-content: space-around;
+  width: 500px;
+  align-items: center;
 }
-.box2{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
+
+#ghicon {
+  height: 84px;
+}
+
+#igicon {
+  width: 84px;
+}
+
+#ldicon {
+  width: 68px;
+}
+
+#emicon {
+  width: 84px;
+}
+
+#renova_footer {
+  display: flex;
+  width: 400px;
+
 }

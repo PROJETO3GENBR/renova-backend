@@ -9,40 +9,28 @@ import './Footer.css';
 
 
 
-function Footer (){
+function Footer() {
     return (
-        <>
-            <Grid container direction="row" justifyContent="center" alignItems="center">
-                <Grid alignItems="center" item xs={12}>
-                    <Box className='box1' display='flex'>
-                        
-                        <Box padding={2} display="flex"  justifyContent="left">
-                           <img id='renova_footer' src='https://i.imgur.com/oAGoVJG.png' alt='renova footer logo'/>
-                        </Box>
-                    <div className='box2'>
-                        <Box className='icon_box'>
-                            <a href="https://github.com/PROJETO3GENBR" target="_blank">
-                                <GitHubIcon className='redes' />
-                            </a>
-                            <a href="https://www.instagram.com/generationbrasil/" target="_blank">
-                                <InstagramIcon className='redes' />
-                            </a>
-                            <a href="https://www.linkedin.com/school/generationbrasil/" target="_blank">
-                                <LinkedInIcon className='redes' />
-                            </a>
-                            <a href="mailto:projeto3genbr@outlook.com" target="_blank">
-                                <EmailIcon className='redes' />
-                            </a>
-                        </Box>
-                        <div id='texto'>
-                            
-                        Criado por Levy, Luna, Anderson, Herbert, Geovanni, Daniele e Lucas.
-                        </div>
-                        </div>
-                    </Box>
-                </Grid>
-            </Grid>
-        </>
+
+        <footer>
+            <div className='item_list'>
+                <img id='renova_footer' src='https://i.imgur.com/oAGoVJG.png' />
+
+                <div className='redes_list'>
+                    <a href='https://github.com/PROJETO3GENBR'>
+                        <img id='ghicon' alt="svgImg" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNjQiIGhlaWdodD0iNjQiCnZpZXdCb3g9IjAsMCwyNTUuOTk0MzEsMjU1Ljk5NDMxIgpzdHlsZT0iZmlsbDojMDAwMDAwOyI+CjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxnIHRyYW5zZm9ybT0ic2NhbGUoMy41NTU1NiwzLjU1NTU2KSI+PHBhdGggZD0iTTM2LDEyYzEzLjI1NSwwIDI0LDEwLjc0NSAyNCwyNGMwLDEwLjY1NiAtNi45NDgsMTkuNjg1IC0xNi41NTksMjIuODE4YzAuMDAzLC0wLjAwOSAwLjAwNywtMC4wMjIgMC4wMDcsLTAuMDIyYzAsMCAtMS42MiwtMC43NTkgLTEuNTg2LC0yLjExNGMwLjAzOCwtMS40OTEgMCwtNC45NzEgMCwtNi4yNDhjMCwtMi4xOTMgLTEuMzg4LC0zLjc0NyAtMS4zODgsLTMuNzQ3YzAsMCAxMC44ODQsMC4xMjIgMTAuODg0LC0xMS40OTFjMCwtNC40ODEgLTIuMzQyLC02LjgxMiAtMi4zNDIsLTYuODEyYzAsMCAxLjIzLC00Ljc4NCAtMC40MjYsLTYuODEyYy0xLjg1NiwtMC4yIC01LjE4LDEuNzc0IC02LjYsMi42OTdjMCwwIC0yLjI1LC0wLjkyMiAtNS45OTEsLTAuOTIyYy0zLjc0MiwwIC01Ljk5MSwwLjkyMiAtNS45OTEsMC45MjJjLTEuNDE5LC0wLjkyMiAtNC43NDQsLTIuODk3IC02LjYsLTIuNjk3Yy0xLjY1NiwyLjAyOSAtMC40MjYsNi44MTIgLTAuNDI2LDYuODEyYzAsMCAtMi4zNDIsMi4zMzIgLTIuMzQyLDYuODEyYzAsMTEuNjEzIDEwLjg4NCwxMS40OTEgMTAuODg0LDExLjQ5MWMwLDAgLTEuMDk3LDEuMjM5IC0xLjMzNiwzLjA2MWMtMC43NiwwLjI1OCAtMS44NzcsMC41NzYgLTIuNzgsMC41NzZjLTIuMzYyLDAgLTQuMTU5LC0yLjI5NiAtNC44MTcsLTMuMzU4Yy0wLjY0OSwtMS4wNDggLTEuOTgsLTEuOTI3IC0zLjIyMSwtMS45MjdjLTAuODE3LDAgLTEuMjE2LDAuNDA5IC0xLjIxNiwwLjg3NmMwLDAuNDY3IDEuMTQ2LDAuNzkzIDEuOTAyLDEuNjU5YzEuNTk0LDEuODI2IDEuNTY1LDUuOTMzIDcuMjQ1LDUuOTMzYzAuNjE3LDAgMS44NzYsLTAuMTUyIDIuODIzLC0wLjI3OWMtMC4wMDYsMS4yOTMgLTAuMDA3LDIuNjU3IDAuMDEzLDMuNDU0YzAuMDM0LDEuMzU1IC0xLjU4NiwyLjExNCAtMS41ODYsMi4xMTRjMCwwIDAuMDA0LDAuMDEzIDAuMDA3LDAuMDIyYy05LjYxLC0zLjEzMyAtMTYuNTU4LC0xMi4xNjIgLTE2LjU1OCwtMjIuODE4YzAsLTEzLjI1NSAxMC43NDUsLTI0IDI0LC0yNHoiPjwvcGF0aD48L2c+PC9nPgo8L3N2Zz4=" /></a>
+
+                    <a href='https://www.instagram.com/generationbrasil/'>
+                        <img id='igicon' alt="svgImg" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iMzIiIGhlaWdodD0iMzIiCnZpZXdCb3g9IjAsMCwyNTUuOTk0MzEsMjU1Ljk5NDMxIgpzdHlsZT0iZmlsbDojMDAwMDAwOyI+CjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxnIHRyYW5zZm9ybT0ic2NhbGUoOCw4KSI+PHBhdGggZD0iTTExLjQ2ODc1LDVjLTMuNTUwNzgsMCAtNi40Njg3NSwyLjkxNDA2IC02LjQ2ODc1LDYuNDY4NzV2OS4wNjI1YzAsMy41NTA3OCAyLjkxNDA2LDYuNDY4NzUgNi40Njg3NSw2LjQ2ODc1aDkuMDYyNWMzLjU1MDc4LDAgNi40Njg3NSwtMi45MTQwNiA2LjQ2ODc1LC02LjQ2ODc1di05LjA2MjVjMCwtMy41NTA3OCAtMi45MTQwNiwtNi40Njg3NSAtNi40Njg3NSwtNi40Njg3NXpNMTEuNDY4NzUsN2g5LjA2MjVjMi40NzI2NiwwIDQuNDY4NzUsMS45OTYwOSA0LjQ2ODc1LDQuNDY4NzV2OS4wNjI1YzAsMi40NzI2NiAtMS45OTYwOSw0LjQ2ODc1IC00LjQ2ODc1LDQuNDY4NzVoLTkuMDYyNWMtMi40NzI2NiwwIC00LjQ2ODc1LC0xLjk5NjA5IC00LjQ2ODc1LC00LjQ2ODc1di05LjA2MjVjMCwtMi40NzI2NiAxLjk5NjA5LC00LjQ2ODc1IDQuNDY4NzUsLTQuNDY4NzV6TTIxLjkwNjI1LDkuMTg3NWMtMC41MDM5MSwwIC0wLjkwNjI1LDAuNDAyMzQgLTAuOTA2MjUsMC45MDYyNWMwLDAuNTAzOTEgMC40MDIzNCwwLjkwNjI1IDAuOTA2MjUsMC45MDYyNWMwLjUwMzkxLDAgMC45MDYyNSwtMC40MDIzNCAwLjkwNjI1LC0wLjkwNjI1YzAsLTAuNTAzOTEgLTAuNDAyMzQsLTAuOTA2MjUgLTAuOTA2MjUsLTAuOTA2MjV6TTE2LDEwYy0zLjMwMDc4LDAgLTYsMi42OTkyMiAtNiw2YzAsMy4zMDA3OCAyLjY5OTIyLDYgNiw2YzMuMzAwNzgsMCA2LC0yLjY5OTIyIDYsLTZjMCwtMy4zMDA3OCAtMi42OTkyMiwtNiAtNiwtNnpNMTYsMTJjMi4yMjI2NiwwIDQsMS43NzczNCA0LDRjMCwyLjIyMjY2IC0xLjc3NzM0LDQgLTQsNGMtMi4yMjI2NiwwIC00LC0xLjc3NzM0IC00LC00YzAsLTIuMjIyNjYgMS43NzczNCwtNCA0LC00eiI+PC9wYXRoPjwvZz48L2c+Cjwvc3ZnPg==" />
+                    </a>
+                    <a href='https://www.linkedin.com/school/generationbrasil/'>
+                        <img id='ldicon' alt="svgImg" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNTAiIGhlaWdodD0iNTAiCnZpZXdCb3g9IjAsMCwyNTUuOTk0MzEsMjU1Ljk5NDMxIgpzdHlsZT0iZmlsbDojMDAwMDAwOyI+CjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxnIHRyYW5zZm9ybT0ic2NhbGUoNS4xMiw1LjEyKSI+PHBhdGggZD0iTTQxLDRoLTMyYy0yLjc2LDAgLTUsMi4yNCAtNSw1djMyYzAsMi43NiAyLjI0LDUgNSw1aDMyYzIuNzYsMCA1LC0yLjI0IDUsLTV2LTMyYzAsLTIuNzYgLTIuMjQsLTUgLTUsLTV6TTE3LDIwdjE5aC02di0xOXpNMTEsMTQuNDdjMCwtMS40IDEuMiwtMi40NyAzLC0yLjQ3YzEuOCwwIDIuOTMsMS4wNyAzLDIuNDdjMCwxLjQgLTEuMTIsMi41MyAtMywyLjUzYy0xLjgsMCAtMywtMS4xMyAtMywtMi41M3pNMzksMzloLTZjMCwwIDAsLTkuMjYgMCwtMTBjMCwtMiAtMSwtNCAtMy41LC00LjA0aC0wLjA4Yy0yLjQyLDAgLTMuNDIsMi4wNiAtMy40Miw0LjA0YzAsMC45MSAwLDEwIDAsMTBoLTZ2LTE5aDZ2Mi41NmMwLDAgMS45MywtMi41NiA1LjgxLC0yLjU2YzMuOTcsMCA3LjE5LDIuNzMgNy4xOSw4LjI2eiI+PC9wYXRoPjwvZz48L2c+Cjwvc3ZnPg==" />
+                    </a>
+                    <a href='mailto:projeto3genbr@outlook.com'>
+                        <img id='emicon' alt="svgImg" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNjQiIGhlaWdodD0iNjQiCnZpZXdCb3g9IjAsMCwyNTUuOTk0MzEsMjU1Ljk5NDMxIgpzdHlsZT0iZmlsbDojMDAwMDAwOyI+CjxnIHRyYW5zZm9ybT0iIj48ZyBmaWxsPSIjZmZmZmZmIiBmaWxsLXJ1bGU9Im5vbnplcm8iIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0iYnV0dCIgc3Ryb2tlLWxpbmVqb2luPSJtaXRlciIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2UtZGFzaGFycmF5PSIiIHN0cm9rZS1kYXNob2Zmc2V0PSIwIiBmb250LWZhbWlseT0ibm9uZSIgZm9udC13ZWlnaHQ9Im5vbmUiIGZvbnQtc2l6ZT0ibm9uZSIgdGV4dC1hbmNob3I9Im5vbmUiIHN0eWxlPSJtaXgtYmxlbmQtbW9kZTogbm9ybWFsIj48ZyB0cmFuc2Zvcm09InNjYWxlKDMuNTU1NTYsMy41NTU1NikiPjxwYXRoIGQ9Ik0yMCwxNmMtMi4wNywwIC0zLjk4OTc3LDAuNzEwNjMgLTUuNTA5NzcsMS44OTA2M2wxOC45MTAxNiwxNi4xMzg2N2MxLjUxLDEuMjkgMy42ODkyMiwxLjI5IDUuMTk5MjIsMGwxOC45MTAxNiwtMTYuMTM4NjdjLTEuNTIsLTEuMTggLTMuNDM5NzcsLTEuODkwNjIgLTUuNTA5NzcsLTEuODkwNjJ6TTExLjk0OTIyLDIwLjk4MDQ3Yy0wLjYxLDEuMjEgLTAuOTQ5MjIsMi41Nzk1MyAtMC45NDkyMiw0LjAxOTUzdjIyYzAsNC45NiA0LjA0LDkgOSw5aDMyYzQuOTYsMCA5LC00LjA0IDksLTl2LTIyYzAsLTEuNDQgLTAuMzM5MjIsLTIuODA5NTMgLTAuOTQ5MjIsLTQuMDE5NTNsLTE4Ljg2MTMzLDE2LjA4OTg0Yy0xLjUsMS4yOSAtMy4zNDk0NSwxLjkyOTY5IC01LjE4OTQ1LDEuOTI5NjljLTEuODQsMCAtMy42ODk0NSwtMC42Mzk2OSAtNS4xODk0NSwtMS45Mjk2OXoiPjwvcGF0aD48L2c+PC9nPjwvZz4KPC9zdmc+" /></a>
+                </div>
+            </div>
+        </footer>
     )
 }
 

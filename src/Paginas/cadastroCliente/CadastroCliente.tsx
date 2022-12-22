@@ -85,7 +85,7 @@ function CadastroCliente() {
             <Grid item xs={6} alignItems='center'>
                 <Box paddingX={10}>
                     <form onSubmit={onSubmit}>
-                        <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='textos2'>Cadastre-se na Plataforma</Typography>
+                        <Typography variant='h3' component='h3' align='center' className='texto2'>Cadastre-se na Plataforma</Typography>
                         <TextField value={user.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='Usuario' variant='outlined' name='usuario' margin='normal' fullWidth />
                         <TextField value={user.email} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}id='email' label='Email' variant='outlined' name='email' margin='normal'fullWidth />
                         <TextField value={user.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}id='senha' label='Senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth />

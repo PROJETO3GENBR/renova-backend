@@ -1,3 +1,6 @@
+    /*h3{
+        color: #2BAE5E;
+    }*/
 .imagem2 {
     background-image: url(https://i.imgur.com/ViNS0YV.png);
     background-repeat: no-repeat;
@@ -7,8 +10,9 @@
     background-position: center;
 }
 
-.textos2{
+.texto2{
     font-weight: bold !important;
+    color:  #2BAE5E;
 }
 
 .btnCancelar{

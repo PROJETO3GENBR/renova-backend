@@ -17,13 +17,17 @@ import AlterarCadastro from './Paginas/alterarCadastro/AlterarCadastro';
 import { Home } from './Paginas/Home/Home';
 import Perfil from './Paginas/Perfil/Perfil';
 import { AtualizarProduto } from './components/produto/atualizarProduto/AtualizarProduto';
-
+import {Provider} from 'react-redux';
+import store from './store/store';
+import {ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
 function App() {
   return (
-
+    <Provider store={store}>
+    <ToastContainer />
     <Router>
       <div style={{minHeight: 'calc(100vh - 100px)'}} >
       <Navbar />
@@ -49,7 +53,7 @@ function App() {
         </div>
       <Footer />
     </Router>
-
+ </Provider>
   );
 }
 

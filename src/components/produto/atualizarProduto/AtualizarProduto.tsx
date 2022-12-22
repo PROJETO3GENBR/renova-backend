@@ -128,9 +128,7 @@ function AtualizarProduto() {
                                     Cancelar
                                 </Button>
                             </Link>
-                            <Button type='submit' variant='contained' color='primary'>
-                                Salvar Alterações
-                            </Button>
+                        
                         </Box>
                     </form>
                 </Box>

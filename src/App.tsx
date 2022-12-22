@@ -21,6 +21,7 @@ import {Provider} from 'react-redux';
 import store from './store/store';
 import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Inicio from './Paginas/inicio/inicio';
 
 
 
@@ -32,7 +33,7 @@ function App() {
       <div style={{minHeight: 'calc(100vh - 100px)'}} >
       <Navbar />
         <Routes>
-            <Route path="/" element={<Login />} />
+            <Route path="/" element={<Inicio />} />
             <Route path='/home' element={<Home />} />
             <Route path='/cadastrar' element={<CadastroCliente />} />
             <Route path='/login' element={<Login />} />
@@ -49,6 +50,7 @@ function App() {
             <Route path="/atualizar" element={<AlterarCadastro/>} />
             <Route path="/listaproduto" element={<ListaProduto/>} />
             <Route path="/perfil" element={<Perfil/>}/>
+            <Route path="/inicio" element={<Inicio/>}/>
         </Routes>
         </div>
       <Footer />

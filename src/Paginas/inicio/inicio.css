@@ -1,0 +1,151 @@
+.inicio_page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.side1 {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+
+}
+
+#renova_logo_about {
+  width: 680px;
+  align-self: center;
+  margin-top: 8%;
+}
+
+#texto {
+  margin-top: 5%;
+  margin-left: 14%;
+  font-size: 28px;
+  width: 60%;
+  color: rgb(39, 39, 39);
+}
+
+#button_list {
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+  width: 70%;
+  margin-top: 20%;
+
+}
+
+.use_btn {
+  height: 68px;
+  border-radius: 48px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+#inscrever_btn {
+  height: 68px;
+  border-radius: 48px;
+  font-size: 28px;
+  font-weight: 700;
+  width: 55%;
+  color: white;
+  background-color: #2e4052;
+}
+
+#home_btn {
+  height: 68px;
+  border-radius: 48px;
+  font-size: 28px;
+  font-weight: 700;
+  background-color: #2BAE5E;
+  color: white;
+  width: 43%;
+}
+
+.side2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+}
+
+#login_btn {
+  position: absolute;
+  right: 0;
+  margin: 4%;
+  background-color: #2BAE5E;
+  width: 12%;
+  font-size: 32px;
+  color: white;
+  height: 50px;
+
+}
+
+#pessoa_svg {
+  width: 700px;
+  margin-top: 10%;
+  margin-left: 5%;
+  margin-bottom: 30%;
+}
+
+.sobre_page_2 {
+  display: flex;
+  flex-direction: column;
+}
+.cm{
+  display: block;
+}
+
+#mt1 {
+  color: #2BAE5E;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  align-self: center;
+  font-size: 84px;
+  font-weight: 700;
+  margin-bottom: 5%;
+}
+
+#membros_c1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+margin-bottom: 2%;
+}
+
+#m1 {
+  display: flex;
+  padding: 3%;
+  border-radius: 20px;
+  flex-direction: column;
+  background-color: #2e4052;
+  width: 300px;
+}
+
+
+#m1_links{
+  margin-top: 5%;
+  display: flex;
+  height: 64px;
+  justify-content: space-between;
+  align-items: center;
+}
+#m1_nome{
+  text-align: center;
+  color: white;
+  font-size: 32px;
+}
+
+#m1_g {
+  align-self: center;
+  height: 200px;
+  border-radius: 20px;
+}
+#membros_c2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 20%;
+}
+#ldicon {
+  width: 68px;
+}

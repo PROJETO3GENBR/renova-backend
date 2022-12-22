@@ -20,9 +20,9 @@ function Home() {
   }, [produto.length]);
   return (
     <>
-    
+
       <Grid container>
-        { 
+        {
           produto.map(produto => (
             <Grid item xs={6} sm={4} md={3} >
               <Box m={2} >
@@ -35,8 +35,8 @@ function Home() {
                       image={produto.foto}
                       alt="#"
                     />
-                 
-                 
+
+
 
                     <Typography className="bold" variant="h5" component="h2">
                       {produto.nome}
@@ -84,4 +84,4 @@ function Home() {
   );
 }
 
-export {Home} ;
+export { Home };

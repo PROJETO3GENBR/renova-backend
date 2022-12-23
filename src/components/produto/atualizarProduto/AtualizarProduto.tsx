@@ -95,7 +95,7 @@ function AtualizarProduto() {
             <Grid item xs={6} alignItems='center'>
                 <Box paddingX={10}>
                     <form onSubmit={onSubmit}>
-                        <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='textos2'>Atualizar Produto   </Typography>
+                        <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' >Atualizar Produto   </Typography>
                         <TextField value={produto.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id='nome' label='Nome' variant='outlined' name='nome' margin='normal' fullWidth />
                         <TextField value={produto.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id='descricao' label='Descrição' variant='outlined' name='descricao' margin='normal' fullWidth />
                         <TextField value={produto.preco} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)} id='preco' label='Preço' variant='outlined' name='preco' margin='normal' fullWidth />

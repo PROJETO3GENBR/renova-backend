@@ -1,12 +1,31 @@
-#botao_perfil{
+#botao_perfil1{
   background-color: #072b47;
   color: white;
   margin: 2%;
-
+  text-transform: uppercase;
+  border: 1px solid #2BAE5E;
 }
-#botao_perfil_delete{
+
+#botao_perfil1:hover {
+  background-color: #2BAE5E;
+}
+
+
+#botao_perfil_delete1{
   background-color: #a11717;
   color: white;
   margin: 2%;
-
 }
+
+#botao_nav1 {
+  background-color: #072b47;
+  color: white;
+  margin: 2%;
+  text-transform: uppercase;
+  border: 1px solid #2BAE5E;
+}
+
+#botao_nav1:hover {
+  background-color: #2BAE5E;
+}
+

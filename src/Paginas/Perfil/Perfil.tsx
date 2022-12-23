@@ -66,10 +66,10 @@ function Perfil() {
       <div>
         
       </div>
-      <Button id='botao_perfil' href='/formularioProduto'>CADASTRAR PRODUTO</Button>
-       <Button id='botao_nav' href='/listaproduto'>ATUALIZAR PRODUTO</Button> 
-      <Button id='botao_perfil' href='/atualizar'>ATUALIZAR PERFIL</Button>
-      <Button id='botao_perfil_delete' href='/listaproduto' >DELETAR PRODUTO</Button>
+      <Button id='botao_perfil1' href='/formularioProduto'>CADASTRAR PRODUTO</Button>
+       <Button id='botao_nav1' href='/listaproduto'>ATUALIZAR PRODUTO</Button> 
+      <Button id='botao_perfil1' href='/atualizar'>ATUALIZAR PERFIL</Button>
+      <Button id='botao_perfil_delete1' href='/listaproduto' >DELETAR PRODUTO</Button>
     </main>
   )
 }

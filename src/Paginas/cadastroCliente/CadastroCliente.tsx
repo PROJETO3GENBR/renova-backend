@@ -36,7 +36,7 @@ function CadastroCliente() {
         if (userResult.id != 0) {
             navigate("/login")
         }
-    })
+    }, [userResult])
 
 
     function confirmarSenhaHandle(e: ChangeEvent<HTMLInputElement>){

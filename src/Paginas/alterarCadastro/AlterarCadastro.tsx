@@ -86,7 +86,7 @@ function AlterarCadastro() {
             <Grid item xs={6} alignItems='center'>
                 <Box paddingX={10}>
                     <form onSubmit={onSubmit}>
-                        <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='textos2'>Atualizar</Typography>
+                        <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='textos2'>Atualizar Usuário</Typography>
                         <TextField value={user.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='usuario' variant='outlined' name='usuario' margin='normal' fullWidth />
                         <TextField value={user.email} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}id='email' label='email' variant='outlined' name='email' margin='normal'fullWidth />
                         <TextField value={user.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}id='senha' label='senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth />

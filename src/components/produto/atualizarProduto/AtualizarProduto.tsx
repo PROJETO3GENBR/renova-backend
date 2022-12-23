@@ -80,12 +80,12 @@ function AtualizarProduto() {
                 draggable: false,
                 theme: "colored",
                 progress: undefined,
-                });
+            });
         }
-        back ()
+        back()
     }
 
-    function back (){
+    function back() {
         navigate('/home');
     }
 
@@ -118,24 +118,20 @@ function AtualizarProduto() {
                                 }
                             </Select>
                             <FormHelperText>Escolha a categoria do produto</FormHelperText>
-                            <Button type="submit" variant="contained" color="primary">
-                                Finalizar
-                            </Button>
-                        </FormControl>
-                        <Box marginTop={2} textAlign='center'>
-                            <Link to='/home' className='text-decorator-none'>
-                                <Button variant='contained' color='secondary' className='btnCancelar'>
-                                    Cancelar
+                            <Box marginTop={2} textAlign='center'>
+                                <Link to='/home' className='text-decorator-none'>
+                                    <Button variant='contained' color='secondary' className='btnCancelar'>
+                                        Cancelar
+                                    </Button>
+                                </Link>
+                                <Button className='botao-atualizar' type="submit" variant="contained" color="primary">
+                                    Finalizar
                                 </Button>
-                            </Link>
-                        
-                        </Box>
+                            </Box>
+                        </FormControl>
                     </form>
                 </Box>
             </Grid>
-
-
-
         </Grid>
     );
 }

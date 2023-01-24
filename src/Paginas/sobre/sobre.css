@@ -1,0 +1,96 @@
+
+
+.container {
+  background-color: ;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2%;
+}
+
+
+#mt1{
+  font-size: 88px;
+  font-weight: 900;
+  color: #2BAE5E;
+  margin-bottom: 8%;
+  text-align: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 480px;
+  width: 300px;
+  background-color: #2e4052;
+  border-radius: 10px;
+  box-shadow: 0rem 0 2rem #000;
+  /*   margin-left: -50px; */
+  margin: 2%;
+  transition: 0.4s ease-out;
+  position: relative;
+  left: 0px;
+}
+
+.card:not(:first-child) {
+  margin-left: 20px;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
+
+.title {
+  color: rgb(239, 37, 37);
+  font-weight: 300;
+  font-size: 24px;
+  text-align: center;
+  margin: 10px;
+}
+
+.bar {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+
+.card:hover .filledbar {
+  width: 120px;
+  transition: 0.4s ease-out;
+}
+
+
+.card:hover .stroke {
+  stroke-dashoffset: 100;
+  transition: 0.6s ease-out;
+}
+
+
+
+.cm {
+  display: block;
+}
+
+#m1_g {
+  width: 100%;
+  height: 300px;
+  align-self: center;
+  border-radius: 10px;
+  
+}
+
+.ghicon{
+
+  width: 60px;
+  height: 60px;
+  
+}
+.sobre_page_2 {
+  border-top: 2px solid #2BAE5E;
+  padding-top: 6rem;
+  display: flex;
+  flex-direction: column;
+}
+

@@ -7,15 +7,14 @@
 .side1 {
   display: flex;
   flex-direction: column;
-
   width: 100%;
 
 }
 
 #renova_logo_about {
-  width: 680px;
+  width: 600px;
   align-self: center;
-  margin-top: 8%;
+  margin-top: 10%;
 }
 
 #texto {
@@ -30,32 +29,25 @@
   display: flex;
   align-self: center;
   justify-content: space-between;
-  width: 70%;
-  margin-top: 20%;
-
+  width: 80%;
+  margin-top: 10%;
 }
 
-.use_btn {
-  height: 68px;
-  border-radius: 48px;
-  font-size: 28px;
-  font-weight: 700;
-}
 
 #inscrever_btn {
-  height: 68px;
+  height: 78px;
   border-radius: 48px;
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 700;
-  width: 55%;
+  width: 105%;
   color: white;
   background-color: #2e4052;
 }
 
 #home_btn {
-  height: 68px;
+  height: 78px;
   border-radius: 48px;
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 700;
   background-color: #2BAE5E;
   color: white;
@@ -68,6 +60,7 @@
   width: 100%;
 
 }
+
 
 #login_btn {
   position: absolute;
@@ -82,72 +75,32 @@
 }
 
 #pessoa_svg {
-  width: 700px;
+  width: 600px;
   margin-top: 10%;
   margin-left: 5%;
-  margin-bottom: 30%;
-}
-
-.sobre_page_2 {
-  display: flex;
-  flex-direction: column;
-}
-.cm{
-  display: block;
-}
-
-#mt1 {
-  color: #2BAE5E;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  align-self: center;
-  font-size: 84px;
-  font-weight: 700;
-  margin-bottom: 5%;
-  
-}
-
-#membros_c1 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-margin-bottom: 2%;
-}
-
-#m1 {
-  display: flex;
-  padding: 3%;
-  border-radius: 20px;
-  flex-direction: column;
-  background-color: #2e4052;
-  width: 300px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-}
-
-
-#m1_links{
-  margin-top: 5%;
-  display: flex;
-  height: 64px;
-  justify-content: space-between;
-  align-items: center;
-}
-#m1_nome{
-  text-align: center;
-  color: white;
-  font-size: 32px;
-}
-
-#m1_g {
-  align-self: center;
-  height: 200px;
-  border-radius: 20px;
-}
-#membros_c2 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
   margin-bottom: 20%;
 }
-#ldicon {
-  width: 68px;
+
+.formSide {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#formCad {
+  border: #2BAE5E 3px solid;
+  background: rgb(43,174,94);
+background: linear-gradient(36deg, rgba(43,174,94,0.5) 11%, rgba(133,218,86,0.5) 100%);
+  background-color: #2e40521b;
+  align-self: center; 
+  border-radius: 28px;
+  margin-bottom: 10%;
+  margin-top: 5%;
+  padding: 3%;
+  width: 50%;
+}
+
+.MuiTextField-root {
+  background-color: #fff;
+  border-radius: 10px;
 }

@@ -22,6 +22,7 @@ import store from './store/store';
 import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Inicio from './Paginas/inicio/inicio';
+import Sobre from './Paginas/sobre/sobre';
 
 
 
@@ -33,6 +34,7 @@ function App() {
       <div style={{minHeight: 'calc(100vh - 100px)'}} >
       <Navbar />
         <Routes>
+          <Route path='/sobre' element={<Sobre/>}/>
             <Route path="/" element={<Inicio />} />
             <Route path='/home' element={<Home />} />
             <Route path='/cadastrar' element={<CadastroCliente />} />

@@ -6,6 +6,7 @@ import CadastroCliente from '../cadastroCliente/CadastroCliente'
 
 
 
+
 function Inicio() {
 
 
@@ -33,7 +34,7 @@ function Inicio() {
           </Button>
           <img id='pessoa_svg' src='https://i.imgur.com/AnCvjKl.png' alt='pessoa reciclando' />
         </div>
-
+    
 
 
       </div>

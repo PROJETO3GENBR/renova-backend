@@ -1,23 +1,36 @@
 #navbar {
   background-color: #2E4052;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+#box1 {
+  display: flex;
+  flex-direction: column;
+
 }
 
 #logo {
-  display: flex;
-  width: 200px;
+  justify-content: center;
+  width: 250px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 #botoes {
   display: flex;
-  position: sticky;
-  left: 90%;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  justify-content: space-around;
+  background: rgb(43,174,94);
+  background: linear-gradient(90deg, rgba(43,174,94,1) 0%, rgba(133,218,86,1) 100%);
+  height: 3rem;
 }
 
 #botao_nav {
   background-color: #2E4052;
   color: white;
-  margin: 2%;
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
   text-transform: uppercase;
   border: 1px solid #2BAE5E;
 }
@@ -26,7 +39,7 @@
   background-color: #2BAE5E;
 }
 
-#settings_svg{
+#settings_svg {
   height: 34px;
 }
 
@@ -36,24 +49,26 @@
   color: white;
 }
 
-.navbar_search{
+.navbar_search {
   display: flex;
   margin-left: 60%;
 }
 
-#navbar_search_input{
+#navbar_search_input {
   height: 32px;
   border: none;
   border-radius: 6px;
   margin-right: 6px;
 }
-#navbar_search_button{
+
+#navbar_search_button {
   border-radius: 6px;
 
   border: none;
   height: 34px;
 }
-.foto{
-  display:flex;
+
+.foto {
+  display: flex;
   width: 30px;
 }

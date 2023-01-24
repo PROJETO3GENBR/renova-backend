@@ -10,7 +10,7 @@ import './Navbar.css'
 import { Box, Grid } from '@material-ui/core';
 import useLocalStorage from 'react-use-localstorage';
 import { useNavigate } from 'react-router-dom';
-import {toast} from 'react-toastify';
+import { toast } from 'react-toastify';
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -45,7 +45,7 @@ export default function Navbar() {
       draggable: false,
       theme: "colored",
       progress: undefined,
-  });
+    });
 
     navigate('/login');
   }
@@ -60,12 +60,12 @@ export default function Navbar() {
   return (
     <div className={classes.root}>
       <AppBar elevation={0} id='navbar' position="static">
-        <Toolbar>
+        <Toolbar id='box1'>
 
 
           <a href='/home'>
-
-            <img id='logo' src="https://raw.githubusercontent.com/PROJETO3GENBR/renova-visual-archives/main/logo/renovasemfundo.png" alt="logo" />
+            
+            <img id='logo' src="https://raw.githubusercontent.com/PROJETO3GENBR/renova-visual-archives/main/logo/nrenovasvg.svg" alt="logo" />
           </a>
           {/* <div>
         <form className="navbar_search" action="/action_page.php">
@@ -74,21 +74,24 @@ export default function Navbar() {
         </form>
 </div> */}
 
-          <div id="botoes">
-            <Button id='botao_nav' href='/home'>Home</Button>
-            {button}
 
-            {localStorage.getItem('token') ?
+
+        </Toolbar>
+        <div id="botoes">
+          <Button id='botao_nav' href='/home'>Produtos</Button>
+          <Button id='botao_nav' href='https://github.com/PROJETO3GENBR'>GITHUB</Button>
+
+          {button}
+
+          {localStorage.getItem('token') ?
             <Button href='/perfil'>
               <img id='settings_svg' src='https://i.imgur.com/IKYw1jn.png' alt='' />
             </Button>
             :
             <></>
-            }
-          </div>
-          
+          }
+        </div>
 
-        </Toolbar>
       </AppBar>
     </div>
 

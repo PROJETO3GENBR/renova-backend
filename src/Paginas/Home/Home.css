@@ -1,8 +1,10 @@
 html body {
   background: linear-gradient(107.56deg, #FFFFFF 36.46%, #ABABAB 100%);
   background-attachment: fixed;
+  width: 100%;
 }
-#produto_card{
+
+#produto_card {
   display: flex;
   flex-direction: column;
   outline: 1px solid rgb(136, 136, 136);
@@ -12,25 +14,77 @@ html body {
   min-height: 450px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
-.produto_img{
+
+.produto_img {
   border-radius: 6px;
+  width: 100%;
+  
 }
-#produto_card #produto_button_comprar{
+
+#fundo {
+  display: flex;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+#produto_card #produto_button_comprar {
   background-color: #2BAE5E;
   color: white;
   position: absolute;
   bottom: 0;
-  margin-bottom: 3%;
+  right: 0;
+  margin-right: 5%;
+  margin-bottom: 5%;
   font-weight: 600;
 }
-#produto_card_preco{
+#produto_card_title{
+  font-size: 20px;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  border-bottom:1px solid rgb(255, 255, 255) ;
+}
+#produto_card_desc{
+  font-size: 14px;
+  padding-top: 4%;
+}
+#produto_card_preco {
   font-weight: 800;
-  font-size: 32px;
+  font-size: 34px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: #85DA56;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 4%;
+  margin-left: 4%;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .bold {
   font-weight: bold !important;
+}
+#container_pub{
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+  margin-bottom: 1rem;
+}
+#btn_pub{
+  font-size: 300%;
+  background-image: url(../../../public/images/btnren.png);
+  background-size: 100%;
+  background-position: center;
+  font-weight: 900;
+  height: 115px;
+  border-radius: 14px;
+  border: none;
+  width: 68%;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+
+}
+#btn_pub:hover{
+  color: #2E4052;
+  opacity: 60%;
+  cursor: pointer;
 }

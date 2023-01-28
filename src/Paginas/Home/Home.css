@@ -18,7 +18,7 @@ html body {
 .produto_img {
   border-radius: 6px;
   width: 100%;
-  
+
 }
 
 #fundo {
@@ -26,6 +26,13 @@ html body {
   margin-left: 15%;
   margin-right: 15%;
 }
+
+@media screen and (max-width: 600px) {
+  #fundo {
+    margin: 0;
+  }
+}
+
 
 #produto_card #produto_button_comprar {
   background-color: #2BAE5E;
@@ -37,16 +44,19 @@ html body {
   margin-bottom: 5%;
   font-weight: 600;
 }
-#produto_card_title{
+
+#produto_card_title {
   font-size: 20px;
   padding-top: 4%;
   padding-bottom: 4%;
-  border-bottom:1px solid rgb(255, 255, 255) ;
+  border-bottom: 1px solid rgb(255, 255, 255);
 }
-#produto_card_desc{
+
+#produto_card_desc {
   font-size: 14px;
   padding-top: 4%;
 }
+
 #produto_card_preco {
   font-weight: 800;
   font-size: 34px;
@@ -63,28 +73,44 @@ html body {
 .bold {
   font-weight: bold !important;
 }
-#container_pub{
+
+#container_pub {
   display: flex;
   justify-content: center;
   margin-top: 2%;
   margin-bottom: 1rem;
 }
-#btn_pub{
-  font-size: 300%;
-  background-image: url(../../../public/images/btnren.png);
-  background-size: 100%;
-  background-position: center;
-  font-weight: 900;
-  height: 115px;
-  border-radius: 14px;
-  border: none;
-  width: 68%;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
+@media screen and (max-width: 600px) {
+  #container_pub {
+    max-width: 100%;
 
+  }
 }
-#btn_pub:hover{
-  color: #2E4052;
-  opacity: 60%;
-  cursor: pointer;
-}
+
+  #btn_pub {
+    font-size: 300%;
+    background-image: url(../../../public/images/btnrenova.svg);
+    background-size: 100%;
+    background-position: center;
+    font-weight: 900;
+    height: 115px;
+    border-radius: 10px;
+    border: none;
+    width: 68%;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+
+  @media screen and (max-width: 600px) {
+    #btn_pub {
+      max-height: 80px;
+      margin-top: 1%;
+      width: 90%;
+    }
+  }
+
+  #btn_pub:hover {
+    color: #2E4052;
+    opacity: 60%;
+    cursor: pointer;
+  }

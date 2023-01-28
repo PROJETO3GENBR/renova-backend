@@ -16,6 +16,7 @@ footer {
   align-content: center;
 }
 
+
 .redes_list {
   display: flex;
   height: 64px;
@@ -41,7 +42,37 @@ footer {
 }
 
 #renova_footer {
-  display: flex;
+  width: 25%;
+}
+@media screen and (max-width: 600px) {
+  .item_list {
+    flex-direction: column;
+    height: auto;
+  }
+  .redes_list{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  #renova_footer{
+    width: 200px;
+    align-self: center;
+    margin-top: 20px;
+  }
   
-  height: 48px;
+#ghicon {
+  height: 64px;
+}
+
+#igicon {
+  width: 64px;
+}
+
+#ldicon {
+  width: 52px;
+}
+
+#emicon {
+  width: 64px;
+}
+
 }

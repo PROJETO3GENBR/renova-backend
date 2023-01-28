@@ -32,7 +32,7 @@
   margin-top: 0.5%;
   margin-bottom: 0.5%;
   text-transform: uppercase;
-  border: 1px solid #2BAE5E;
+  margin: auto;
 }
 
 #botao_nav:hover {

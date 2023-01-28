@@ -51,7 +51,7 @@ function ListaProduto() {
       <Grid container>
         {
           produto.map(produto => (
-            <Grid item xs={6} sm={4} md={3} >
+            <Grid item xs={12} sm={6} md={4} >
               <Box m={2} >
                 <Card variant="outlined">
                   <CardContent>

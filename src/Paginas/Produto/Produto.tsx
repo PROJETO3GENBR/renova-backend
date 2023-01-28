@@ -12,12 +12,12 @@ import { toast } from 'react-toastify';
 
 function VendaProduto() {
   const [produto, setProduto] = useState<Produto>({
-  id:0, 
-  nome:'',
-  foto:'',
-  descricao:'',
-  preco:0
-})
+    id: 0,
+    nome: '',
+    foto: '',
+    descricao: '',
+    preco: 0
+  })
   const [token, setToken] = useLocalStorage('token');
   const { id } = useParams<{ id: string }>();
   let navigate = useNavigate();
@@ -33,13 +33,13 @@ function VendaProduto() {
         draggable: false,
         theme: "colored",
         progress: undefined,
-        });
+      });
       navigate("/login")
 
     }
   }, [token])
 
-  async function getPost (id: string) {
+  async function getPost(id: string) {
     await buscaId(`/produto/${id}`, setProduto, {
       headers: {
         'Authorization': token
@@ -47,39 +47,34 @@ function VendaProduto() {
     })
   }
 
-  useEffect(() =>{
-    if(id !== undefined){
-        getPost(id)
+  useEffect(() => {
+    if (id !== undefined) {
+      getPost(id)
     }
-}, [id])
+  }, [id])
   return (
     <>
       <Grid container>
-            <main id='main_produto'>
-        
-    
-          <div id='product_cartao_buy'>
-            <h1 id='product_name_buy'> {produto.nome} </h1>
-            <img id='product_image_buy' src={produto.foto} alt='' title='' />
-            <div id='product_button_price'>
-            <Button  href='/SucessPage' id='product_button_buy' variant="contained" size='medium' color="secondary">
-              comprar
-            </Button>
-            <p> {`R$: ${produto.preco}`}</p>
+        <main id='main_produto'>
+
+          <div id='product_container'>
+            <div id='product_cartao_buy'>
+              <img id='product_image_buy' src={produto.foto} alt='' title='' />
+              <h1 id='product_name_buy'> {produto.nome} </h1>
+              <div id='product_button_price'>
+                <Button href='/SucessPage' id='product_button_buy' variant="contained" size='medium' color="secondary">
+                  comprar
+                </Button>
+             
+              </div>
+            </div>
+            <div id='product_des'>
+            <div id='product_price'> {`R$: ${produto.preco}`}</div>
+            <div id='desc_pr'> {produto.descricao}</div>
             </div>
           </div>
 
-
-        <div id='sub_product_buy'>
-          <div id='sub_product_desc'> Descrição do Produto</div>
-          <div id='sub_product_desc_text'>
-            <p>
-            {produto.descricao}
-            </p>
-          </div>
-        </div>
-
-      </main>
+        </main>
       </Grid>
     </>
   )

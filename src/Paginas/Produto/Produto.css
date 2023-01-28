@@ -6,23 +6,41 @@
   width: 100%;
 }
 
+#product_container{
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  margin-top: 2%;
+  justify-content: center;
+  background-color: #2E4052;
+  border-radius: 14px;
+}
 #product_cartao_buy {
   display: flex;
   flex-direction: column;
-  width: 40%;
-  background-color: #2E4052;
+  width: 50%;
   color: white;
-  margin-bottom: 10%;
-  margin-top: 2%;
-  border-radius: 6px;
 }
 
+#product_des{
+  width: 50%;
+}
+
+#desc_pr{
+  color: #fff;
+  text-align: left;
+  font-size: 24px;
+}
+#product_price{
+  font-size: 60px;
+}
 #product_name_buy {
   font-size: 48px;
   text-align: center;
 }
 
 #product_image_buy {
+  margin-top: 5%;
   width: 80%;
   align-self: center;
   border-radius: 6px;

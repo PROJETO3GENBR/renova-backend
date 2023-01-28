@@ -18,11 +18,21 @@ function Home() {
   useEffect(() => {
     getPost()
   }, [produto.length]);
+
+
+  let prdbtn;
+  if (token != '') {
+    prdbtn =  <a id='btn_pub' href='/formularioProduto'></a>
+  } else {
+   
+  }
+
+
   return (
     <>
       <div id='container_pub'>
     
-        <a id='btn_pub'></a>
+       {prdbtn}
       </div>
       <div id='fundo'>
         <Grid container>

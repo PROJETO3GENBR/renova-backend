@@ -4,6 +4,7 @@
   display: flex;
 }
 
+
 .side1 {
   display: flex;
   flex-direction: column;
@@ -89,10 +90,10 @@
 
 #formCad {
   border: #2BAE5E 3px solid;
-  background: rgb(43,174,94);
-background: linear-gradient(36deg, rgba(43,174,94,0.5) 11%, rgba(133,218,86,0.5) 100%);
+  background: rgb(43, 174, 94);
+  background: linear-gradient(36deg, rgba(43, 174, 94, 0.5) 11%, rgba(133, 218, 86, 0.5) 100%);
   background-color: #2e40521b;
-  align-self: center; 
+  align-self: center;
   border-radius: 28px;
   margin-bottom: 10%;
   margin-top: 5%;
@@ -103,4 +104,95 @@ background: linear-gradient(36deg, rgba(43,174,94,0.5) 11%, rgba(133,218,86,0.5)
 .MuiTextField-root {
   background-color: #fff;
   border-radius: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .inicio_page {
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    margin: 0;
+  }
+
+  .side1 {
+    width: 100%;
+    margin: 0;
+    justify-content: center;
+  }
+
+  #renova_logo_about {
+    display: none;
+  }
+
+  #texto {
+    text-align: center;
+    font-size: 20px;
+    margin: 0;
+    padding-top: 5%;
+    align-self: center;
+    width: 90%;
+    color: rgb(39, 39, 39);
+  }
+
+  #button_list {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 1%;
+    margin-top: 90%;
+    font-size: 18px;
+  }
+
+  #inscrever_btn {
+    align-self: center;
+    border-radius: 10px;
+    font-weight: 700;
+    width: 100%;
+    margin-bottom: 5%;
+    color: white;
+    background-color: #2e4052;
+  }
+
+  #home_btn {
+    border-radius: 10px;
+
+    font-weight: 700;
+    background-color: #2BAE5E;
+    color: white;
+    width: auto;
+  }
+
+  #login_btn {
+    display: none;
+  }
+
+  #pessoa_svg {
+    width: 80%;
+    align-self: center;
+    margin: 0;
+    position: absolute;
+    top: 38%;
+  }
+
+  .formSide {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+
+  #formCad {
+    border: #2BAE5E 3px solid;
+    background: rgb(43, 174, 94);
+    background: linear-gradient(36deg, rgba(43, 174, 94, 0.5) 11%, rgba(133, 218, 86, 0.5) 100%);
+    background-color: #2e40521b;
+    align-self: center;
+    border-radius: 14px;
+    margin-bottom: 10%;
+    margin-top: 5%;
+    width: 100%;
+  }
+
 }

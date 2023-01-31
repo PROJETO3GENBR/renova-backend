@@ -1,7 +1,15 @@
 body {
     background-color: #294A2B;
 }
+#usuario{
+   border: 4px #2BAE5E solid;
+   border-radius: 10px;
+}
+#senha{
+   border: 4px #2BAE5E solid;
+   border-radius: 10px;
 
+}
 
 .textos1{
     font-weight: bold !important;
@@ -39,6 +47,7 @@ body {
  #conta_cadastro{
     color: #2BAE5E;
     font-weight: 600;
+    margin-bottom: 100%;
  }
  #cadastre{
     text-decoration: none ;
@@ -46,4 +55,16 @@ body {
  }
  #bt-logar{
    background: #2BAE5E;
+ }
+ #loginform{
+width: 100%;
+
+ }
+ #bgform{
+   background-color: #2E4052;
+   margin-top: 5%;
+   margin-bottom: 5%;
+   padding-top: 4%;
+   color: #fff;
+   border-radius: 10px;
  }

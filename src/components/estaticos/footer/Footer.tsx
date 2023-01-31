@@ -14,7 +14,7 @@ function Footer() {
 
         <footer>
             <div className='item_list'>
-                <img id='renova_footer' src='https://i.imgur.com/oAGoVJG.png' />
+                <img id='renova_footer' src='https://raw.githubusercontent.com/PROJETO3GENBR/renova-visual-archives/main/logo/nrenovasvg.svg' alt='logo' />
 
                 <div className='redes_list'>
                     <a href='https://github.com/PROJETO3GENBR'>

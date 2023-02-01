@@ -9,7 +9,6 @@ import { busca, buscaId } from './../../services/Service'
 import { toast } from 'react-toastify';
 
 
-
 function VendaProduto() {
   const [produto, setProduto] = useState<Produto>({
     id: 0,
@@ -65,15 +64,13 @@ function VendaProduto() {
                 <Button href='/SucessPage' id='product_button_buy' variant="contained" size='medium' color="secondary">
                   comprar
                 </Button>
-             
               </div>
             </div>
             <div id='product_des'>
             <div id='product_price'> {`R$: ${produto.preco}`}</div>
-            <div id='desc_pr'> {produto.descricao}</div>
+            <div id='desc_pr'>DESCRIÇÃO: {produto.descricao}</div>
             </div>
           </div>
-
         </main>
       </Grid>
     </>
